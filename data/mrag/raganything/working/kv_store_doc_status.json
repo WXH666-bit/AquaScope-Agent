@@ -1,0 +1,40 @@
+{
+  "doc_sa_invertebrates_p0429_0432": {
+    "status": "processed",
+    "chunks_count": 20,
+    "chunks_list": [
+      "chunk-c93021c72fb2fa03f2a5d62bc0adb874",
+      "chunk-21ece0344bd87c400d1d234a341d632a",
+      "chunk-b7d87a9fdd6796fbc3a24c40022179ca",
+      "chunk-f0f7451703f2287af83a619489c9a745",
+      "chunk-b6cd43fc132cc983a0a818413961611e",
+      "chunk-2d7a926bdefa616f9a22865cd82d942c",
+      "chunk-f415192a0ac774637b252cf14199cb4e",
+      "chunk-c2277bdb0cfb9e13e612107b546b5702",
+      "chunk-492e7a51e0a2392955e5726fd9c64f77",
+      "chunk-2cad148e1c5a94e8c3f62bdfee2b66fa",
+      "chunk-43c53974450202fe6a82416f946fc26f",
+      "chunk-01224e247c54c26376338d1d355035dc",
+      "chunk-1ff0eb99ae21e17d67fdd1dbba08d515",
+      "chunk-193d40aeb45ee8e91a4034e163403a2b",
+      "chunk-6312bf3bcdf9b3397dffc439b6ad9d04",
+      "chunk-3ac84607d0a0c71594418de16c8ad390",
+      "chunk-83d371544d6eb48b5321717428ea68f1",
+      "chunk-37cbd16434444d9480d8632be65be39c",
+      "chunk-5bd15d157743c89b7fd9be20dd1df380",
+      "chunk-272e62d6d62e10360c47dab598eb09e1"
+    ],
+    "content_summary": "[DOC_ID=doc_sa_invertebrates_p0429_0432][SOURCE=Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf][PAGE=429]\ndistinguishing features\n\n[DOC_ID=doc_sa_invertebrates_p0429_0432][SOURCE=Field-Guide-to-SA-Offshore-Marine-Inve...",
+    "content_length": 11621,
+    "created_at": "2026-06-10T12:40:07.835347+00:00",
+    "updated_at": "2026-06-10T13:21:02+00:00",
+    "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+    "track_id": "insert_20260610_204007_9c01d975",
+    "metadata": {
+      "processing_start_time": 1781095207,
+      "processing_end_time": 1781095674
+    },
+    "error_msg": "",
+    "multimodal_processed": true
+  }
+}

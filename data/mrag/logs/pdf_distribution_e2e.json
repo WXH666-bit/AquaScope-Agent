@@ -1,0 +1,233 @@
+{
+  "session_id": "verify_pdf_distribution_map",
+  "turn_id": "turn_f03346eb6644",
+  "answer": "已从本地 PDF 图片实体库提取并显示分布图：Distribution map for Jasus lalandii (West coast rock lobster) from the species identification page. PDF page 149, printed page 146. Associated diagnostic features: Carapace with flattened squamous (scale-like) tubercles of various sizes, each pointed with a fringe of setae around the base. Two large spines and a small central rostrum between the eyes. Abdominal segments fringed with setae, the penultimate transverse row better developed than the others, so that a more or less conspicuous groove is formed between it and the hindmost row. Phyllosoma larva transparent and free floating, with flat, leaflike body and long spindly legs. Associated colour description: Reddish brown, often with purplish or violet tints, especially on tail fan, under surface dull yellow, flagellum of antennae often with pale bands. Associated size description: Maximum total body length 460 mm, carapace length up to 180 mm. Associated distribution: Southern African endemic. Restricted to southern Africa from Northern Namibia to Algoa Bay. Extracted image dimensions: 156x141.。如果图片标题对应某个具体物种，该图只代表该物种，不代表整个上位类群的全球分布。\n\n为您找到了 *Jasus lalandii*（西岸岩龙虾）的分布图，前端已为您展示了一张来自 PDF 图片库的最佳匹配分布图。\n\n关于其分布范围，*Jasus lalandii* 是南部非洲的特有种，分布局限于南部非洲海域，从纳米比亚北部一直延伸至南非的阿尔戈阿湾（Algoa Bay）[E1]。",
+  "answer_type": "image_gallery",
+  "images": [
+    {
+      "image_id": "imgdoc_sa_taxon_jaslal_p0149_img_04",
+      "image_path": "data/mrag/raganything/extracted_assets/sa_invertebrates/images/sa_taxon_jaslal_p0149_img_04.jpeg",
+      "image_url": "/files/data/mrag/raganything/extracted_assets/sa_invertebrates/images/sa_taxon_jaslal_p0149_img_04.jpeg",
+      "caption": "Distribution map for Jasus lalandii (West coast rock lobster) from the species identification page. PDF page 149, printed page 146. Associated diagnostic features: Carapace with flattened squamous (scale-like) tubercles of various sizes, each pointed with a fringe of setae around the base. Two large spines and a small central rostrum between the eyes. Abdominal segments fringed with setae, the penultimate transverse row better developed than the others, so that a more or less conspicuous groove is formed between it and the hindmost row. Phyllosoma larva transparent and free floating, with flat, leaflike body and long spindly legs. Associated colour description: Reddish brown, often with purplish or violet tints, especially on tail fan, under surface dull yellow, flagellum of antennae often with pale bands. Associated size description: Maximum total body length 460 mm, carapace length up to 180 mm. Associated distribution: Southern African endemic. Restricted to southern Africa from Northern Namibia to Algoa Bay. Extracted image dimensions: 156x141.",
+      "scientific_name": "Jasus lalandii",
+      "common_name": "West coast rock lobster",
+      "page": 149,
+      "score": 1.0,
+      "image_role": "distribution_map",
+      "source": "raganything_pdf_image",
+      "source_page": "",
+      "license": ""
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "id": "imgdoc_sa_taxon_jaslal_p0149_img_04",
+      "source_system": "raganything_pdf_image",
+      "source_type": "pdf_image_caption",
+      "title": "Jasus lalandii",
+      "content": "Distribution map for Jasus lalandii (West coast rock lobster) from the species identification page. PDF page 149, printed page 146. Associated diagnostic features: Carapace with flattened squamous (scale-like) tubercles of various sizes, each pointed with a fringe of setae around the base. Two large spines and a small central rostrum between the eyes. Abdominal segments fringed with setae, the penultimate transverse row better developed than the others, so that a more or less conspicuous groove is formed between it and the hindmost row. Phyllosoma larva transparent and free floating, with flat, leaflike body and long spindly legs. Associated colour description: Reddish brown, often with purplish or violet tints, especially on tail fan, under surface dull yellow, flagellum of antennae often with pale bands. Associated size description: Maximum total body length 460 mm, carapace length up to 180 mm. Associated distribution: Southern African endemic. Restricted to southern Africa from Northern Namibia to Algoa Bay. Extracted image dimensions: 156x141.",
+      "score": 1.0,
+      "page": 149,
+      "image_path": "data/mrag/raganything/extracted_assets/sa_invertebrates/images/sa_taxon_jaslal_p0149_img_04.jpeg",
+      "image_url": "/files/data/mrag/raganything/extracted_assets/sa_invertebrates/images/sa_taxon_jaslal_p0149_img_04.jpeg",
+      "metadata": {
+        "image_id": "sa_taxon_jaslal_p0149_img_04",
+        "book_id": "sa_invertebrates",
+        "doc_id": "doc_sa_invertebrates_p0149",
+        "unit_id": "sa_taxon_jaslal_p0149",
+        "entity_id": "taxon:jasus_lalandii",
+        "entity_names": [
+          "Jasus lalandii",
+          "West coast rock lobster",
+          "JasLal",
+          "Jasus",
+          "Palinuridae",
+          "Decapoda",
+          "Malacostraca",
+          "Arthropoda"
+        ],
+        "scientific_name": "Jasus lalandii",
+        "common_name": "West coast rock lobster",
+        "fb_code": "JasLal",
+        "phylum": "Arthropoda",
+        "class": "Malacostraca",
+        "order": "Decapoda",
+        "family": "Palinuridae",
+        "genus": "Jasus",
+        "pdf_page": 149,
+        "printed_page": 146,
+        "source_file": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+        "xref": 2699,
+        "width": 156,
+        "height": 141,
+        "bbox": [
+          347.24,
+          93.39,
+          503.15,
+          234.43
+        ],
+        "extension": "jpeg",
+        "sha256": "b46fc5a2fba176665f0d11e2a59ad4c76eee50850b647543df969fbbfd09980b",
+        "duplicate_of": "",
+        "image_path": "data/mrag/raganything/extracted_assets/sa_invertebrates/images/sa_taxon_jaslal_p0149_img_04.jpeg",
+        "extraction_method": "pymupdf_extract_image",
+        "image_role": "distribution_map",
+        "link_method": "same_species_page",
+        "link_confidence": 1.0,
+        "index_for_entity_search": true,
+        "caption": "Distribution map for Jasus lalandii (West coast rock lobster) from the species identification page. PDF page 149, printed page 146. Associated diagnostic features: Carapace with flattened squamous (scale-like) tubercles of various sizes, each pointed with a fringe of setae around the base. Two large spines and a small central rostrum between the eyes. Abdominal segments fringed with setae, the penultimate transverse row better developed than the others, so that a more or less conspicuous groove is formed between it and the hindmost row. Phyllosoma larva transparent and free floating, with flat, leaflike body and long spindly legs. Associated colour description: Reddish brown, often with purplish or violet tints, especially on tail fan, under surface dull yellow, flagellum of antennae often with pale bands. Associated size description: Maximum total body length 460 mm, carapace length up to 180 mm. Associated distribution: Southern African endemic. Restricted to southern Africa from Northern Namibia to Algoa Bay. Extracted image dimensions: 156x141.",
+        "caption_method": "entity_page_context",
+        "visual_keywords": [
+          "Jasus lalandii",
+          "West coast rock lobster",
+          "JasLal",
+          "Jasus",
+          "Palinuridae",
+          "Decapoda",
+          "Malacostraca",
+          "Arthropoda"
+        ],
+        "caption_status": "context_generated",
+        "source_type": "pdf_image_caption",
+        "modality": "image",
+        "absolute_image_path": "F:\\rag\\AquaBio-AgentRAG\\data\\mrag\\raganything\\extracted_assets\\sa_invertebrates\\images\\sa_taxon_jaslal_p0149_img_04.jpeg",
+        "image_exists": true,
+        "doc_title": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+        "page": 149,
+        "retrieval_source": "raganything_pdf_image"
+      }
+    }
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "node": "session_init",
+      "event": "completed",
+      "detail": "verify_pdf_distribution_map"
+    },
+    {
+      "step": 2,
+      "node": "memory_load",
+      "event": "completed",
+      "detail": "0"
+    },
+    {
+      "step": 3,
+      "node": "followup_resolver",
+      "event": "completed",
+      "detail": "False:none:normal"
+    },
+    {
+      "step": 4,
+      "node": "router",
+      "event": "completed",
+      "detail": "pdf_qa"
+    },
+    {
+      "step": 5,
+      "node": "query_rewrite",
+      "event": "completed",
+      "detail": "query_rewrite"
+    },
+    {
+      "step": 6,
+      "node": "source_selection",
+      "event": "completed",
+      "detail": "image_retriever,pdf_image_retriever"
+    },
+    {
+      "step": 7,
+      "node": "react_tool_plan",
+      "event": "completed",
+      "detail": "step=1;mode=native_function_calling;tools=pdf_image_retriever"
+    },
+    {
+      "step": 8,
+      "node": "retrieval",
+      "event": "completed",
+      "detail": "text=0,web=0,image=1,pair=0,pdf=0,mcp_graph=0,mcp_pdf_images=1,filter_species=none,elapsed=0.19s"
+    },
+    {
+      "step": 9,
+      "node": "rerank",
+      "event": "completed",
+      "detail": "weighted:1"
+    },
+    {
+      "step": 10,
+      "node": "context_builder",
+      "event": "completed",
+      "detail": "1"
+    },
+    {
+      "step": 11,
+      "node": "answer_generation",
+      "event": "completed",
+      "detail": "qwen:qwen3.7-plus:12.20s"
+    },
+    {
+      "step": 12,
+      "node": "response_guard",
+      "event": "completed",
+      "detail": "normal"
+    },
+    {
+      "step": 13,
+      "node": "evaluation",
+      "event": "completed",
+      "detail": "True:1.00"
+    },
+    {
+      "step": 14,
+      "node": "finalize",
+      "event": "completed",
+      "detail": "finalize"
+    },
+    {
+      "step": 15,
+      "node": "memory_save",
+      "event": "completed",
+      "detail": "0"
+    },
+    {
+      "step": 16,
+      "node": "api",
+      "event": "completed",
+      "detail": "latency_ms=19012"
+    },
+    {
+      "step": 17,
+      "node": "image_role_guard",
+      "event": "completed",
+      "detail": "requested=distribution_map;selected=distribution_map;source=raganything_pdf_image"
+    }
+  ],
+  "warnings": [],
+  "memory": {
+    "last_species_ids": [],
+    "last_species_names": [],
+    "last_image_path": "",
+    "last_image_caption": "",
+    "last_answer_summary": "为您找到了 *Jasus lalandii*（西岸岩龙虾）的分布图，前端已为您展示了一张来自 PDF 图片库的最佳匹配分布图。\n\n关于其分布范围，*Jasus lalandii* 是南部非洲的特有种，分布局限于南部非洲海域，从纳米比亚北部一直延伸至南非的阿尔戈阿湾（Algoa Bay）[E1]。",
+    "last_evidence_ids": [
+      "imgdoc_sa_taxon_jaslal_p0149_img_04"
+    ]
+  },
+  "route": {
+    "task_type": "pdf_qa",
+    "need_vlm": false,
+    "need_text_retrieval": false,
+    "need_image_retrieval": true,
+    "need_multimodal_retrieval": false,
+    "need_pdf_retrieval": false
+  },
+  "model": {
+    "provider": "qwen",
+    "name": "qwen3.7-plus",
+    "called": true,
+    "fallback": false
+  },
+  "pending_review": false,
+  "raw_state": null
+}

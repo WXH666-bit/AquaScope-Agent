@@ -1,0 +1,11 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+data/outputs/
+data/model_cache/
+data/vector_db/
+data/mrag/vector_db/
+streamlit*.log
+.streamlit.pid
+importtime.log

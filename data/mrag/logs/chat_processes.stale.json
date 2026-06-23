@@ -1,0 +1,11 @@
+﻿{
+    "api_pid":  17604,
+    "api_url":  "http://127.0.0.1:8000",
+    "mcp_launcher_pid":  18052,
+    "ui_launcher_pid":  21648,
+    "ui_pid":  20572,
+    "mcp_url":  "http://127.0.0.1:8765/mcp",
+    "api_launcher_pid":  11572,
+    "mcp_pid":  15056,
+    "ui_url":  "http://127.0.0.1:8510"
+}

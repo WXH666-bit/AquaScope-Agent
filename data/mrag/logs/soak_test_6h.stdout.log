@@ -1,0 +1,8 @@
+{
+  "event": "summary",
+  "started_at": "2026-06-11T18:39:58.309127+00:00",
+  "finished_at": "2026-06-12T00:39:58.315048+00:00",
+  "iterations": 718,
+  "failures": 0,
+  "passed": true
+}

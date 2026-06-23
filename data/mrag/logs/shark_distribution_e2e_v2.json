@@ -1,0 +1,606 @@
+{
+  "session_id": "verify_shark_distribution_map_v2",
+  "turn_id": "turn_9f209287c6e1",
+  "answer": "鲨鱼的分布范围非常广泛，从近岸、珊瑚礁、外海到深海均有不同种类的分布，它们常出现在开放水体、礁区边缘或食物资源丰富的区域。\n\n由于本地图片库未检索到鲨鱼的分布图，我已从 Wikimedia Commons 补充获取了相关图片，并已显示在画廊中。\n\n需要说明的是，画廊中展示的是**大白鲨**的分布图。该图仅代表大白鲨这一具体物种的分布，不代表整个鲨鱼类群的全球分布。如果您需要了解某种特定鲨鱼的分布信息，可以提供更具体的物种名称。",
+  "answer_type": "image_gallery",
+  "images": [
+    {
+      "image_id": "network_04e637b83f2c",
+      "image_path": "data/mrag/network_images/shark/04e637b83f2ca04f.png",
+      "image_url": "/files/data/mrag/network_images/shark/04e637b83f2ca04f.png",
+      "caption": "File:Great White Shark Distibution map.png",
+      "scientific_name": "Shark",
+      "common_name": "",
+      "page": null,
+      "score": 0.0,
+      "image_role": "distribution_map",
+      "source": "wikimedia_commons",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Great_White_Shark_Distibution_map.png",
+      "license": "CC BY-SA 3.0",
+      "map_verified": true
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "id": "text_shark_overview",
+      "source_system": "chroma",
+      "source_type": "species_text_chunk",
+      "title": "总体介绍",
+      "content": "鲨鱼（Shark）是本水下生物多模态 RAG 知识库中的一个核心类别。该类别的记录不仅服务于百科式问答，也用于图片输入后的语义检索和图文联合解释。在系统中，鲨鱼被组织为物种卡片、文本知识 chunk、图片 caption 和图文配对记录四种知识单元。用户可以询问“鲨鱼是什么”“鲨鱼有什么特点”“图片中的生物是否可能是鲨鱼”等问题。回答时，Agent 会优先检索该类别的总览、视觉特征、栖息环境和相似物种区分信息，再结合用户问题或上传图片描述生成解释。鲨鱼通常具有流线型身体、背鳍、尾鳍和较明显的头部轮廓。水下图像中常表现为中大型游动鱼类，身体侧影稳定，背鳍和尾鳍是重要识别特征。 这类信息可以帮助模型把抽象物种名称转换为可检索、可比较、可解释的视觉和生态线索。",
+      "score": 0.763881,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "title": "总体介绍",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Shark",
+        "chunk_type": "overview",
+        "modality": "text",
+        "species_id": "shark",
+        "worms_url": "https://www.marinespecies.org/rest/AphiaRecordsByName/Selachimorpha",
+        "source_type": "species_text_chunk"
+      }
+    },
+    {
+      "evidence_id": "E2",
+      "id": "text_shark_ecology_behavior",
+      "source_system": "chroma",
+      "source_type": "species_text_chunk",
+      "title": "生态行为",
+      "content": "鲨鱼的生态和行为信息可以让问答结果更丰富，也能帮助系统解释图片中可能出现的姿态或场景。鲨鱼多为捕食者或机会性摄食者，依靠游动和感知系统寻找猎物。不同种类体型、食性和活动范围差异很大。 在普通文本问答中，这部分知识可回答“它如何生活”“主要吃什么”“为什么会出现在某种环境中”等问题。在图像问答中，行为信息可辅助解释目标为什么贴近海底、为什么漂浮在水体中、为什么隐藏在洞穴或附着在岩石上。需要注意的是，单张图片通常不能可靠推断完整行为，Agent 在回答时应使用“可能”“通常”“常见”等表达，避免把知识库中的一般规律说成当前图片的绝对事实。",
+      "score": 0.741701,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "modality": "text",
+        "source_type": "species_text_chunk",
+        "chunk_type": "ecology_behavior",
+        "species_id": "shark",
+        "title": "生态行为",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Shark",
+        "worms_url": "https://www.marinespecies.org/rest/AphiaRecordsByName/Selachimorpha"
+      }
+    },
+    {
+      "evidence_id": "E3",
+      "id": "text_shark_habitat",
+      "source_system": "chroma",
+      "source_type": "species_text_chunk",
+      "title": "栖息环境",
+      "content": "鲨鱼的栖息环境是判断图片语义的重要辅助信息。鲨鱼分布范围很广，从近岸、珊瑚礁、外海到深海都有不同种类。它们常出现在开放水体、礁区边缘或食物资源丰富区域。 在多模态 RAG 场景中，环境信息可以帮助 Agent 判断图片中的背景是否与候选物种一致。例如，如果图片描述中出现海底岩石、珊瑚礁、沙地、海草床、洞穴、开放水体或漂浮姿态，这些信息会影响候选物种的排序。不过，栖息环境不能作为唯一依据，因为同一物种可能出现在多种水下环境中，而不同物种也可能共享相似背景。因此，本 chunk 主要用于补充判断和生成更自然的解释。",
+      "score": 0.73859,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "species_id": "shark",
+        "worms_url": "https://www.marinespecies.org/rest/AphiaRecordsByName/Selachimorpha",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Shark",
+        "chunk_type": "habitat",
+        "source_type": "species_text_chunk",
+        "modality": "text",
+        "title": "栖息环境"
+      }
+    },
+    {
+      "evidence_id": "E4",
+      "id": "text_shark_image_recognition_tips",
+      "source_system": "chroma",
+      "source_type": "species_text_chunk",
+      "title": "图像识别提示",
+      "content": "在基于图片的水下生物识别问答中，鲨鱼的识别流程建议分为三步。第一步由 VLM 对上传图片生成 caption，重点描述主体形状、颜色、附属结构、背景环境和是否存在水下退化问题。第二步使用 caption 检索 image_doc 和 multimodal_pair，找到与描述相似的历史图片记录和对应物种。第三步根据候选 species_id 检索 鲨鱼 的 overview、visual_features、habitat 和 similar_species chunk，构造最终回答上下文。对鲨鱼而言，识别时应特别关注：鲨鱼通常具有流线型身体、背鳍、尾鳍和较明显的头部轮廓。水下图像中常表现为中大型游动鱼类，身体侧影稳定，背鳍和尾鳍是重要识别特征。 如果图片模糊、目标被遮挡或背景复杂，应输出低置信度解释。",
+      "score": 0.737914,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "title": "图像识别提示",
+        "species_id": "shark",
+        "chunk_type": "image_recognition_tips",
+        "worms_url": "https://www.marinespecies.org/rest/AphiaRecordsByName/Selachimorpha",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Shark",
+        "modality": "text",
+        "source_type": "species_text_chunk"
+      }
+    },
+    {
+      "evidence_id": "E5",
+      "id": "text_shark_taxonomy",
+      "source_system": "chroma",
+      "source_type": "species_text_chunk",
+      "title": "分类学信息",
+      "content": "鲨鱼（Shark）在本知识库中的科学名称或上级分类记录为 Selachimorpha，分类组字段记录为 Chordata / Chondrichthyes。分类学信息的作用不是直接完成图片识别，而是为 RAG 系统提供稳定的实体锚点。当不同来源使用不同名称时，例如英文俗名、中文名、科学分类名或数据集类别名，系统可以通过 species_id 将它们映射到同一物种知识单元。在后续扩展中，该字段可由 WoRMS API 补充 AphiaID、有效学名、rank、kingdom、phylum、class、order、family、genus 等信息。在回答涉及“属于什么类群”“和哪些生物亲缘较近”“为什么这个类别叫这个名字”的问题时，Agent 会把 taxonomy chunk 与 overview、visual_features chunk 一起作为上下文。",
+      "score": 0.736476,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "species_id": "shark",
+        "worms_url": "https://www.marinespecies.org/rest/AphiaRecordsByName/Selachimorpha",
+        "source_type": "species_text_chunk",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Shark",
+        "title": "分类学信息",
+        "modality": "text",
+        "chunk_type": "taxonomy"
+      }
+    },
+    {
+      "evidence_id": "E6",
+      "id": "text_shark_rag_usage",
+      "source_system": "chroma",
+      "source_type": "species_text_chunk",
+      "title": "RAG使用说明",
+      "content": "在 AquaBio-MRAG 项目中，鲨鱼相关知识主要用于三类任务。第一类是纯文本问答，例如询问鲨鱼的分类、外观、栖息环境和生态行为；第二类是图片问答，即用户上传水下图片后，系统根据 caption 检索与鲨鱼相关的图文配对记录；第三类是相似物种区分，例如比较鲨鱼与其他水下生物在形态、背景和识别线索上的差异。为了提高回答质量，检索时不应只返回一个 chunk，而应聚合 species_card、visual_features、habitat、similar_species 和 multimodal_pair。最终由 Answer Agent 综合用户原问题、图片 caption、检索上下文和来源元数据生成回答。",
+      "score": 0.723564,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "species_id": "shark",
+        "worms_url": "https://www.marinespecies.org/rest/AphiaRecordsByName/Selachimorpha",
+        "source_type": "species_text_chunk",
+        "modality": "text",
+        "chunk_type": "rag_usage",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Shark",
+        "title": "RAG使用说明"
+      }
+    },
+    {
+      "evidence_id": "E7",
+      "id": "text_shark_visual_features",
+      "source_system": "chroma",
+      "source_type": "species_text_chunk",
+      "title": "视觉特征",
+      "content": "鲨鱼在水下图像中的视觉识别应关注整体形态、边缘轮廓、身体结构、颜色纹理和所处背景。鲨鱼通常具有流线型身体、背鳍、尾鳍和较明显的头部轮廓。水下图像中常表现为中大型游动鱼类，身体侧影稳定，背鳍和尾鳍是重要识别特征。 由于水下图像经常存在偏蓝、偏绿、低对比度、浑浊和局部模糊等问题，颜色信息并不总是可靠。因此，在多模态 RAG 中，图片 caption 应尽量描述稳定的形状线索，例如身体是否扁平、是否具有触手、是否呈圆形或放射状、是否有鳍、甲壳、腕足、棘刺或长触角。当用户上传图片时，VLM 生成的 caption 会与这一视觉特征 chunk 共同检索，用于判断图片中的目标是否与鲨鱼相似。",
+      "score": 0.723465,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "source_type": "species_text_chunk",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Shark",
+        "worms_url": "https://www.marinespecies.org/rest/AphiaRecordsByName/Selachimorpha",
+        "chunk_type": "visual_features",
+        "modality": "text",
+        "species_id": "shark",
+        "title": "视觉特征"
+      }
+    },
+    {
+      "evidence_id": "E8",
+      "id": "text_shark_similar_species",
+      "source_system": "chroma",
+      "source_type": "species_text_chunk",
+      "title": "相似物种区分",
+      "content": "鲨鱼在水下图像中可能与若干相似物种或背景结构混淆。鲨鱼容易与大型鱼类、海豚、魟鱼侧影或远距离模糊目标混淆。识别时应关注流线型身体、三角背鳍、尾鳍形态和游动姿态。 相似物种区分是多模态 RAG 的重点，因为用户上传图片时，VLM caption 往往只能描述形状和背景，未必能直接给出准确类别。系统应将鲨鱼的相似类别与视觉特征一起检索，比较目标的轮廓、附属结构、运动姿态和环境关系。当证据不足时，回答应给出候选类别和不确定原因，而不是强行判断。该 chunk 适合回答“它和另一类生物有什么区别”“为什么不是某某类别”“图片中目标是否可能被误认”等问题。",
+      "score": 0.709762,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "chunk_type": "similar_species",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Shark",
+        "source_type": "species_text_chunk",
+        "modality": "text",
+        "species_id": "shark",
+        "worms_url": "https://www.marinespecies.org/rest/AphiaRecordsByName/Selachimorpha",
+        "title": "相似物种区分"
+      }
+    },
+    {
+      "evidence_id": "E9",
+      "id": "card_shark",
+      "source_system": "chroma",
+      "source_type": "species_card",
+      "title": "Selachimorpha",
+      "content": "鲨鱼（Shark，Selachimorpha）是水下生物多模态 RAG 系统中可作为识别、检索和问答对象的一类生物或生物群。从分类角度看，它可归入 Chordata / Chondrichthyes。在构建知识库时，系统需要同时保存中文名、英文名、科学名称、分类层级、视觉特征、栖息环境、生态行为和相似物种信息，这样用户无论是输入文本问题还是上传图片，都可以通过统一的物种标识进行检索和上下文聚合。鲨鱼通常具有流线型身体、背鳍、尾鳍和较明显的头部轮廓。水下图像中常表现为中大型游动鱼类，身体侧影稳定，背鳍和尾鳍是重要识别特征。 鲨鱼分布范围很广，从近岸、珊瑚礁、外海到深海都有不同种类。它们常出现在开放水体、礁区边缘或食物资源丰富区域。 鲨鱼多为捕食者或机会性摄食者，依靠游动和感知系统寻找猎物。不同种类体型、食性和活动范围差异很大。 在图像问答场景中，鲨鱼的识别不能只依靠单一颜色或单一局部纹理，而应结合整体轮廓、身体结构、典型环境和与相似类别的差异。鲨鱼容易与大型鱼类、海豚、魟鱼侧影或远距离模糊目标混淆。识别时应关注流线型身体、三角背鳍、尾鳍形态和游动姿态。 因此，本物种卡片在项目中既用于普通百科问答，也用于图片 caption 检索后的候选物种解释、相似物种区分和最终回答生成。",
+      "score": 0.705919,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "chunk_type": "species_card",
+        "modality": "species_card",
+        "wikipedia_extract": "Sharks are a group of elasmobranch cartilaginous fishes characterized by a ribless endoskeleton, dermal denticles, five to seven gill slits on each side, and pectoral fins that are not fused to the head. Modern sharks are classified within the division Selachii and are the sister group to the Batomorphi. Some sources extend the term \"shark\" as an informal category including extinct members of Chondrichthyes with a shark-like morphology, such as hybodonts. Shark-like chondrichthyans such as Cladoselache and Doliodus first appeared in the Devonian Period, though some fossilized chondrichthyan-like scales are as old as the Late Ordovician. The earliest confirmed modern sharks (Selachii) are known from the Early Jurassic around 200 million years ago, with the oldest known member being Agaleus, though records of true sharks may extend back as far as the Permian.",
+        "species_id": "shark",
+        "worms_url": "https://www.marinespecies.org/rest/AphiaRecordsByName/Selachimorpha",
+        "chinese_name": "鲨鱼",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Shark",
+        "worms_status": 200,
+        "scientific_name": "Selachimorpha",
+        "source_type": "species_card",
+        "english_name": "Shark"
+      }
+    },
+    {
+      "evidence_id": "E10",
+      "id": "pair_img_shark_002",
+      "source_system": "image_retrieval",
+      "source_type": "multimodal_pair",
+      "title": "pair_img_shark_002",
+      "content": "鲨鱼（Shark）是本水下生物多模态 RAG 知识库中的一个核心类别。该类别的记录不仅服务于百科式问答，也用于图片输入后的语义检索和图文联合解释。在系统中，鲨鱼被组织为物种卡片、文本知识 chunk、图片 caption 和图文配对记录四种知识单元。用户可以询问“鲨鱼是什么”“鲨鱼有什么特点”“图片中的生物是否可能是鲨鱼”等问题。回答时，Agent 会优先检索该类别的总览、视觉特征、栖息环境和相似物种区分信息，再结合用户问题或上传图片描述生成解释。鲨鱼通常具有流线型身体、背鳍、尾鳍和较明显的头部轮廓。水下图像中常表现为中大型游动鱼类，身体侧影稳定，背鳍和尾鳍是重要识别特征。 这类信息可以帮助模型把抽象物种名称转换为可检索、可比较、可解释的视觉和生态线索。\n鲨鱼在水下图像中的视觉识别应关注整体形态、边缘轮廓、身体结构、颜色纹理和所处背景。鲨鱼通常具有流线型身体、背鳍、尾鳍和较明显的头部轮廓。水下图像中常表现为中大型游动鱼类，身体侧影稳定，背鳍和尾鳍是重要识别特征。 由于水下图像经常存在偏蓝、偏绿、低对比度、浑浊和局部模糊等问题，颜色信息并不总是可靠。因此，在多模态 RAG 中，图片 caption 应尽量描述稳定的形状线索，例如身体是否扁平、是否具有触手、是否呈圆形或放射状、是否有鳍、甲壳、腕足、棘刺或长触角。当用户上传图片时，VLM 生成的 caption 会与这一视觉特征 chunk 共同检索，用于判断图片中的目标是否与鲨鱼相似。\n鲨鱼的栖息环境是判断图片语义的重要辅助信息。鲨鱼分布范围很广，从近岸、珊瑚礁、外海到深海都有不同种类。它们常出现在开放水体、礁区边缘或食物资源丰富区域。 在多模态 RAG 场景中，环境信息可以帮助 Agent 判断图片中的背景是否与候选物种一致。例如，如果图片描述中出现海底岩石、珊瑚礁、沙地、海草床、洞穴、开放水体或漂浮姿态，这些信息会影响候选物种的排序。不过，栖息环境不能作为唯一依据，因为同一物种可能出现在多种水下环境中，而不同物种也可能共享相似背景。因此，本 chunk 主要用于补充判断和生成更自然的解释。",
+      "score": 0.71929,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "text_ids": "[\"text_shark_overview\", \"text_shark_visual_features\", \"text_shark_habitat\"]",
+        "modality": "image_text_pair",
+        "species_id": "shark",
+        "image_id": "img_shark_002",
+        "source_type": "multimodal_pair"
+      }
+    },
+    {
+      "evidence_id": "E11",
+      "id": "pair_img_shark_007",
+      "source_system": "image_retrieval",
+      "source_type": "multimodal_pair",
+      "title": "pair_img_shark_007",
+      "content": "鲨鱼（Shark）是本水下生物多模态 RAG 知识库中的一个核心类别。该类别的记录不仅服务于百科式问答，也用于图片输入后的语义检索和图文联合解释。在系统中，鲨鱼被组织为物种卡片、文本知识 chunk、图片 caption 和图文配对记录四种知识单元。用户可以询问“鲨鱼是什么”“鲨鱼有什么特点”“图片中的生物是否可能是鲨鱼”等问题。回答时，Agent 会优先检索该类别的总览、视觉特征、栖息环境和相似物种区分信息，再结合用户问题或上传图片描述生成解释。鲨鱼通常具有流线型身体、背鳍、尾鳍和较明显的头部轮廓。水下图像中常表现为中大型游动鱼类，身体侧影稳定，背鳍和尾鳍是重要识别特征。 这类信息可以帮助模型把抽象物种名称转换为可检索、可比较、可解释的视觉和生态线索。\n鲨鱼在水下图像中的视觉识别应关注整体形态、边缘轮廓、身体结构、颜色纹理和所处背景。鲨鱼通常具有流线型身体、背鳍、尾鳍和较明显的头部轮廓。水下图像中常表现为中大型游动鱼类，身体侧影稳定，背鳍和尾鳍是重要识别特征。 由于水下图像经常存在偏蓝、偏绿、低对比度、浑浊和局部模糊等问题，颜色信息并不总是可靠。因此，在多模态 RAG 中，图片 caption 应尽量描述稳定的形状线索，例如身体是否扁平、是否具有触手、是否呈圆形或放射状、是否有鳍、甲壳、腕足、棘刺或长触角。当用户上传图片时，VLM 生成的 caption 会与这一视觉特征 chunk 共同检索，用于判断图片中的目标是否与鲨鱼相似。\n鲨鱼的栖息环境是判断图片语义的重要辅助信息。鲨鱼分布范围很广，从近岸、珊瑚礁、外海到深海都有不同种类。它们常出现在开放水体、礁区边缘或食物资源丰富区域。 在多模态 RAG 场景中，环境信息可以帮助 Agent 判断图片中的背景是否与候选物种一致。例如，如果图片描述中出现海底岩石、珊瑚礁、沙地、海草床、洞穴、开放水体或漂浮姿态，这些信息会影响候选物种的排序。不过，栖息环境不能作为唯一依据，因为同一物种可能出现在多种水下环境中，而不同物种也可能共享相似背景。因此，本 chunk 主要用于补充判断和生成更自然的解释。",
+      "score": 0.716288,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "image_id": "img_shark_007",
+        "source_type": "multimodal_pair",
+        "species_id": "shark",
+        "text_ids": "[\"text_shark_overview\", \"text_shark_visual_features\", \"text_shark_habitat\"]",
+        "modality": "image_text_pair"
+      }
+    },
+    {
+      "evidence_id": "E12",
+      "id": "pair_img_shark_008",
+      "source_system": "image_retrieval",
+      "source_type": "multimodal_pair",
+      "title": "pair_img_shark_008",
+      "content": "鲨鱼（Shark）是本水下生物多模态 RAG 知识库中的一个核心类别。该类别的记录不仅服务于百科式问答，也用于图片输入后的语义检索和图文联合解释。在系统中，鲨鱼被组织为物种卡片、文本知识 chunk、图片 caption 和图文配对记录四种知识单元。用户可以询问“鲨鱼是什么”“鲨鱼有什么特点”“图片中的生物是否可能是鲨鱼”等问题。回答时，Agent 会优先检索该类别的总览、视觉特征、栖息环境和相似物种区分信息，再结合用户问题或上传图片描述生成解释。鲨鱼通常具有流线型身体、背鳍、尾鳍和较明显的头部轮廓。水下图像中常表现为中大型游动鱼类，身体侧影稳定，背鳍和尾鳍是重要识别特征。 这类信息可以帮助模型把抽象物种名称转换为可检索、可比较、可解释的视觉和生态线索。\n鲨鱼在水下图像中的视觉识别应关注整体形态、边缘轮廓、身体结构、颜色纹理和所处背景。鲨鱼通常具有流线型身体、背鳍、尾鳍和较明显的头部轮廓。水下图像中常表现为中大型游动鱼类，身体侧影稳定，背鳍和尾鳍是重要识别特征。 由于水下图像经常存在偏蓝、偏绿、低对比度、浑浊和局部模糊等问题，颜色信息并不总是可靠。因此，在多模态 RAG 中，图片 caption 应尽量描述稳定的形状线索，例如身体是否扁平、是否具有触手、是否呈圆形或放射状、是否有鳍、甲壳、腕足、棘刺或长触角。当用户上传图片时，VLM 生成的 caption 会与这一视觉特征 chunk 共同检索，用于判断图片中的目标是否与鲨鱼相似。\n鲨鱼的栖息环境是判断图片语义的重要辅助信息。鲨鱼分布范围很广，从近岸、珊瑚礁、外海到深海都有不同种类。它们常出现在开放水体、礁区边缘或食物资源丰富区域。 在多模态 RAG 场景中，环境信息可以帮助 Agent 判断图片中的背景是否与候选物种一致。例如，如果图片描述中出现海底岩石、珊瑚礁、沙地、海草床、洞穴、开放水体或漂浮姿态，这些信息会影响候选物种的排序。不过，栖息环境不能作为唯一依据，因为同一物种可能出现在多种水下环境中，而不同物种也可能共享相似背景。因此，本 chunk 主要用于补充判断和生成更自然的解释。",
+      "score": 0.716288,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "source_type": "multimodal_pair",
+        "image_id": "img_shark_008",
+        "text_ids": "[\"text_shark_overview\", \"text_shark_visual_features\", \"text_shark_habitat\"]",
+        "modality": "image_text_pair",
+        "species_id": "shark"
+      }
+    },
+    {
+      "evidence_id": "E13",
+      "id": "pair_img_shark_009",
+      "source_system": "image_retrieval",
+      "source_type": "multimodal_pair",
+      "title": "pair_img_shark_009",
+      "content": "鲨鱼（Shark）是本水下生物多模态 RAG 知识库中的一个核心类别。该类别的记录不仅服务于百科式问答，也用于图片输入后的语义检索和图文联合解释。在系统中，鲨鱼被组织为物种卡片、文本知识 chunk、图片 caption 和图文配对记录四种知识单元。用户可以询问“鲨鱼是什么”“鲨鱼有什么特点”“图片中的生物是否可能是鲨鱼”等问题。回答时，Agent 会优先检索该类别的总览、视觉特征、栖息环境和相似物种区分信息，再结合用户问题或上传图片描述生成解释。鲨鱼通常具有流线型身体、背鳍、尾鳍和较明显的头部轮廓。水下图像中常表现为中大型游动鱼类，身体侧影稳定，背鳍和尾鳍是重要识别特征。 这类信息可以帮助模型把抽象物种名称转换为可检索、可比较、可解释的视觉和生态线索。\n鲨鱼在水下图像中的视觉识别应关注整体形态、边缘轮廓、身体结构、颜色纹理和所处背景。鲨鱼通常具有流线型身体、背鳍、尾鳍和较明显的头部轮廓。水下图像中常表现为中大型游动鱼类，身体侧影稳定，背鳍和尾鳍是重要识别特征。 由于水下图像经常存在偏蓝、偏绿、低对比度、浑浊和局部模糊等问题，颜色信息并不总是可靠。因此，在多模态 RAG 中，图片 caption 应尽量描述稳定的形状线索，例如身体是否扁平、是否具有触手、是否呈圆形或放射状、是否有鳍、甲壳、腕足、棘刺或长触角。当用户上传图片时，VLM 生成的 caption 会与这一视觉特征 chunk 共同检索，用于判断图片中的目标是否与鲨鱼相似。\n鲨鱼的栖息环境是判断图片语义的重要辅助信息。鲨鱼分布范围很广，从近岸、珊瑚礁、外海到深海都有不同种类。它们常出现在开放水体、礁区边缘或食物资源丰富区域。 在多模态 RAG 场景中，环境信息可以帮助 Agent 判断图片中的背景是否与候选物种一致。例如，如果图片描述中出现海底岩石、珊瑚礁、沙地、海草床、洞穴、开放水体或漂浮姿态，这些信息会影响候选物种的排序。不过，栖息环境不能作为唯一依据，因为同一物种可能出现在多种水下环境中，而不同物种也可能共享相似背景。因此，本 chunk 主要用于补充判断和生成更自然的解释。",
+      "score": 0.716288,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "modality": "image_text_pair",
+        "species_id": "shark",
+        "image_id": "img_shark_009",
+        "source_type": "multimodal_pair",
+        "text_ids": "[\"text_shark_overview\", \"text_shark_visual_features\", \"text_shark_habitat\"]"
+      }
+    },
+    {
+      "evidence_id": "E14",
+      "id": "pair_img_shark_005",
+      "source_system": "image_retrieval",
+      "source_type": "multimodal_pair",
+      "title": "pair_img_shark_005",
+      "content": "鲨鱼（Shark）是本水下生物多模态 RAG 知识库中的一个核心类别。该类别的记录不仅服务于百科式问答，也用于图片输入后的语义检索和图文联合解释。在系统中，鲨鱼被组织为物种卡片、文本知识 chunk、图片 caption 和图文配对记录四种知识单元。用户可以询问“鲨鱼是什么”“鲨鱼有什么特点”“图片中的生物是否可能是鲨鱼”等问题。回答时，Agent 会优先检索该类别的总览、视觉特征、栖息环境和相似物种区分信息，再结合用户问题或上传图片描述生成解释。鲨鱼通常具有流线型身体、背鳍、尾鳍和较明显的头部轮廓。水下图像中常表现为中大型游动鱼类，身体侧影稳定，背鳍和尾鳍是重要识别特征。 这类信息可以帮助模型把抽象物种名称转换为可检索、可比较、可解释的视觉和生态线索。\n鲨鱼在水下图像中的视觉识别应关注整体形态、边缘轮廓、身体结构、颜色纹理和所处背景。鲨鱼通常具有流线型身体、背鳍、尾鳍和较明显的头部轮廓。水下图像中常表现为中大型游动鱼类，身体侧影稳定，背鳍和尾鳍是重要识别特征。 由于水下图像经常存在偏蓝、偏绿、低对比度、浑浊和局部模糊等问题，颜色信息并不总是可靠。因此，在多模态 RAG 中，图片 caption 应尽量描述稳定的形状线索，例如身体是否扁平、是否具有触手、是否呈圆形或放射状、是否有鳍、甲壳、腕足、棘刺或长触角。当用户上传图片时，VLM 生成的 caption 会与这一视觉特征 chunk 共同检索，用于判断图片中的目标是否与鲨鱼相似。\n鲨鱼的栖息环境是判断图片语义的重要辅助信息。鲨鱼分布范围很广，从近岸、珊瑚礁、外海到深海都有不同种类。它们常出现在开放水体、礁区边缘或食物资源丰富区域。 在多模态 RAG 场景中，环境信息可以帮助 Agent 判断图片中的背景是否与候选物种一致。例如，如果图片描述中出现海底岩石、珊瑚礁、沙地、海草床、洞穴、开放水体或漂浮姿态，这些信息会影响候选物种的排序。不过，栖息环境不能作为唯一依据，因为同一物种可能出现在多种水下环境中，而不同物种也可能共享相似背景。因此，本 chunk 主要用于补充判断和生成更自然的解释。",
+      "score": 0.71542,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "species_id": "shark",
+        "source_type": "multimodal_pair",
+        "modality": "image_text_pair",
+        "image_id": "img_shark_005",
+        "text_ids": "[\"text_shark_overview\", \"text_shark_visual_features\", \"text_shark_habitat\"]"
+      }
+    },
+    {
+      "evidence_id": "E15",
+      "id": "pair_img_shark_001",
+      "source_system": "image_retrieval",
+      "source_type": "multimodal_pair",
+      "title": "pair_img_shark_001",
+      "content": "鲨鱼（Shark）是本水下生物多模态 RAG 知识库中的一个核心类别。该类别的记录不仅服务于百科式问答，也用于图片输入后的语义检索和图文联合解释。在系统中，鲨鱼被组织为物种卡片、文本知识 chunk、图片 caption 和图文配对记录四种知识单元。用户可以询问“鲨鱼是什么”“鲨鱼有什么特点”“图片中的生物是否可能是鲨鱼”等问题。回答时，Agent 会优先检索该类别的总览、视觉特征、栖息环境和相似物种区分信息，再结合用户问题或上传图片描述生成解释。鲨鱼通常具有流线型身体、背鳍、尾鳍和较明显的头部轮廓。水下图像中常表现为中大型游动鱼类，身体侧影稳定，背鳍和尾鳍是重要识别特征。 这类信息可以帮助模型把抽象物种名称转换为可检索、可比较、可解释的视觉和生态线索。\n鲨鱼在水下图像中的视觉识别应关注整体形态、边缘轮廓、身体结构、颜色纹理和所处背景。鲨鱼通常具有流线型身体、背鳍、尾鳍和较明显的头部轮廓。水下图像中常表现为中大型游动鱼类，身体侧影稳定，背鳍和尾鳍是重要识别特征。 由于水下图像经常存在偏蓝、偏绿、低对比度、浑浊和局部模糊等问题，颜色信息并不总是可靠。因此，在多模态 RAG 中，图片 caption 应尽量描述稳定的形状线索，例如身体是否扁平、是否具有触手、是否呈圆形或放射状、是否有鳍、甲壳、腕足、棘刺或长触角。当用户上传图片时，VLM 生成的 caption 会与这一视觉特征 chunk 共同检索，用于判断图片中的目标是否与鲨鱼相似。\n鲨鱼的栖息环境是判断图片语义的重要辅助信息。鲨鱼分布范围很广，从近岸、珊瑚礁、外海到深海都有不同种类。它们常出现在开放水体、礁区边缘或食物资源丰富区域。 在多模态 RAG 场景中，环境信息可以帮助 Agent 判断图片中的背景是否与候选物种一致。例如，如果图片描述中出现海底岩石、珊瑚礁、沙地、海草床、洞穴、开放水体或漂浮姿态，这些信息会影响候选物种的排序。不过，栖息环境不能作为唯一依据，因为同一物种可能出现在多种水下环境中，而不同物种也可能共享相似背景。因此，本 chunk 主要用于补充判断和生成更自然的解释。",
+      "score": 0.713505,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "modality": "image_text_pair",
+        "source_type": "multimodal_pair",
+        "species_id": "shark",
+        "text_ids": "[\"text_shark_overview\", \"text_shark_visual_features\", \"text_shark_habitat\"]",
+        "image_id": "img_shark_001"
+      }
+    },
+    {
+      "evidence_id": "E16",
+      "id": "pair_img_shark_003",
+      "source_system": "image_retrieval",
+      "source_type": "multimodal_pair",
+      "title": "pair_img_shark_003",
+      "content": "鲨鱼（Shark）是本水下生物多模态 RAG 知识库中的一个核心类别。该类别的记录不仅服务于百科式问答，也用于图片输入后的语义检索和图文联合解释。在系统中，鲨鱼被组织为物种卡片、文本知识 chunk、图片 caption 和图文配对记录四种知识单元。用户可以询问“鲨鱼是什么”“鲨鱼有什么特点”“图片中的生物是否可能是鲨鱼”等问题。回答时，Agent 会优先检索该类别的总览、视觉特征、栖息环境和相似物种区分信息，再结合用户问题或上传图片描述生成解释。鲨鱼通常具有流线型身体、背鳍、尾鳍和较明显的头部轮廓。水下图像中常表现为中大型游动鱼类，身体侧影稳定，背鳍和尾鳍是重要识别特征。 这类信息可以帮助模型把抽象物种名称转换为可检索、可比较、可解释的视觉和生态线索。\n鲨鱼在水下图像中的视觉识别应关注整体形态、边缘轮廓、身体结构、颜色纹理和所处背景。鲨鱼通常具有流线型身体、背鳍、尾鳍和较明显的头部轮廓。水下图像中常表现为中大型游动鱼类，身体侧影稳定，背鳍和尾鳍是重要识别特征。 由于水下图像经常存在偏蓝、偏绿、低对比度、浑浊和局部模糊等问题，颜色信息并不总是可靠。因此，在多模态 RAG 中，图片 caption 应尽量描述稳定的形状线索，例如身体是否扁平、是否具有触手、是否呈圆形或放射状、是否有鳍、甲壳、腕足、棘刺或长触角。当用户上传图片时，VLM 生成的 caption 会与这一视觉特征 chunk 共同检索，用于判断图片中的目标是否与鲨鱼相似。\n鲨鱼的栖息环境是判断图片语义的重要辅助信息。鲨鱼分布范围很广，从近岸、珊瑚礁、外海到深海都有不同种类。它们常出现在开放水体、礁区边缘或食物资源丰富区域。 在多模态 RAG 场景中，环境信息可以帮助 Agent 判断图片中的背景是否与候选物种一致。例如，如果图片描述中出现海底岩石、珊瑚礁、沙地、海草床、洞穴、开放水体或漂浮姿态，这些信息会影响候选物种的排序。不过，栖息环境不能作为唯一依据，因为同一物种可能出现在多种水下环境中，而不同物种也可能共享相似背景。因此，本 chunk 主要用于补充判断和生成更自然的解释。",
+      "score": 0.710008,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "image_id": "img_shark_003",
+        "text_ids": "[\"text_shark_overview\", \"text_shark_visual_features\", \"text_shark_habitat\"]",
+        "species_id": "shark",
+        "modality": "image_text_pair",
+        "source_type": "multimodal_pair"
+      }
+    },
+    {
+      "evidence_id": "E17",
+      "id": "pair_img_shark_010",
+      "source_system": "image_retrieval",
+      "source_type": "multimodal_pair",
+      "title": "pair_img_shark_010",
+      "content": "鲨鱼（Shark）是本水下生物多模态 RAG 知识库中的一个核心类别。该类别的记录不仅服务于百科式问答，也用于图片输入后的语义检索和图文联合解释。在系统中，鲨鱼被组织为物种卡片、文本知识 chunk、图片 caption 和图文配对记录四种知识单元。用户可以询问“鲨鱼是什么”“鲨鱼有什么特点”“图片中的生物是否可能是鲨鱼”等问题。回答时，Agent 会优先检索该类别的总览、视觉特征、栖息环境和相似物种区分信息，再结合用户问题或上传图片描述生成解释。鲨鱼通常具有流线型身体、背鳍、尾鳍和较明显的头部轮廓。水下图像中常表现为中大型游动鱼类，身体侧影稳定，背鳍和尾鳍是重要识别特征。 这类信息可以帮助模型把抽象物种名称转换为可检索、可比较、可解释的视觉和生态线索。\n鲨鱼在水下图像中的视觉识别应关注整体形态、边缘轮廓、身体结构、颜色纹理和所处背景。鲨鱼通常具有流线型身体、背鳍、尾鳍和较明显的头部轮廓。水下图像中常表现为中大型游动鱼类，身体侧影稳定，背鳍和尾鳍是重要识别特征。 由于水下图像经常存在偏蓝、偏绿、低对比度、浑浊和局部模糊等问题，颜色信息并不总是可靠。因此，在多模态 RAG 中，图片 caption 应尽量描述稳定的形状线索，例如身体是否扁平、是否具有触手、是否呈圆形或放射状、是否有鳍、甲壳、腕足、棘刺或长触角。当用户上传图片时，VLM 生成的 caption 会与这一视觉特征 chunk 共同检索，用于判断图片中的目标是否与鲨鱼相似。\n鲨鱼的栖息环境是判断图片语义的重要辅助信息。鲨鱼分布范围很广，从近岸、珊瑚礁、外海到深海都有不同种类。它们常出现在开放水体、礁区边缘或食物资源丰富区域。 在多模态 RAG 场景中，环境信息可以帮助 Agent 判断图片中的背景是否与候选物种一致。例如，如果图片描述中出现海底岩石、珊瑚礁、沙地、海草床、洞穴、开放水体或漂浮姿态，这些信息会影响候选物种的排序。不过，栖息环境不能作为唯一依据，因为同一物种可能出现在多种水下环境中，而不同物种也可能共享相似背景。因此，本 chunk 主要用于补充判断和生成更自然的解释。",
+      "score": 0.70871,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "image_id": "img_shark_010",
+        "modality": "image_text_pair",
+        "source_type": "multimodal_pair",
+        "text_ids": "[\"text_shark_overview\", \"text_shark_visual_features\", \"text_shark_habitat\"]",
+        "species_id": "shark"
+      }
+    },
+    {
+      "evidence_id": "E18",
+      "id": "pair_img_shark_006",
+      "source_system": "image_retrieval",
+      "source_type": "multimodal_pair",
+      "title": "pair_img_shark_006",
+      "content": "鲨鱼（Shark）是本水下生物多模态 RAG 知识库中的一个核心类别。该类别的记录不仅服务于百科式问答，也用于图片输入后的语义检索和图文联合解释。在系统中，鲨鱼被组织为物种卡片、文本知识 chunk、图片 caption 和图文配对记录四种知识单元。用户可以询问“鲨鱼是什么”“鲨鱼有什么特点”“图片中的生物是否可能是鲨鱼”等问题。回答时，Agent 会优先检索该类别的总览、视觉特征、栖息环境和相似物种区分信息，再结合用户问题或上传图片描述生成解释。鲨鱼通常具有流线型身体、背鳍、尾鳍和较明显的头部轮廓。水下图像中常表现为中大型游动鱼类，身体侧影稳定，背鳍和尾鳍是重要识别特征。 这类信息可以帮助模型把抽象物种名称转换为可检索、可比较、可解释的视觉和生态线索。\n鲨鱼在水下图像中的视觉识别应关注整体形态、边缘轮廓、身体结构、颜色纹理和所处背景。鲨鱼通常具有流线型身体、背鳍、尾鳍和较明显的头部轮廓。水下图像中常表现为中大型游动鱼类，身体侧影稳定，背鳍和尾鳍是重要识别特征。 由于水下图像经常存在偏蓝、偏绿、低对比度、浑浊和局部模糊等问题，颜色信息并不总是可靠。因此，在多模态 RAG 中，图片 caption 应尽量描述稳定的形状线索，例如身体是否扁平、是否具有触手、是否呈圆形或放射状、是否有鳍、甲壳、腕足、棘刺或长触角。当用户上传图片时，VLM 生成的 caption 会与这一视觉特征 chunk 共同检索，用于判断图片中的目标是否与鲨鱼相似。\n鲨鱼的栖息环境是判断图片语义的重要辅助信息。鲨鱼分布范围很广，从近岸、珊瑚礁、外海到深海都有不同种类。它们常出现在开放水体、礁区边缘或食物资源丰富区域。 在多模态 RAG 场景中，环境信息可以帮助 Agent 判断图片中的背景是否与候选物种一致。例如，如果图片描述中出现海底岩石、珊瑚礁、沙地、海草床、洞穴、开放水体或漂浮姿态，这些信息会影响候选物种的排序。不过，栖息环境不能作为唯一依据，因为同一物种可能出现在多种水下环境中，而不同物种也可能共享相似背景。因此，本 chunk 主要用于补充判断和生成更自然的解释。",
+      "score": 0.705017,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "species_id": "shark",
+        "source_type": "multimodal_pair",
+        "text_ids": "[\"text_shark_overview\", \"text_shark_visual_features\", \"text_shark_habitat\"]",
+        "image_id": "img_shark_006",
+        "modality": "image_text_pair"
+      }
+    },
+    {
+      "evidence_id": "E19",
+      "id": "pair_img_shark_004",
+      "source_system": "image_retrieval",
+      "source_type": "multimodal_pair",
+      "title": "pair_img_shark_004",
+      "content": "鲨鱼（Shark）是本水下生物多模态 RAG 知识库中的一个核心类别。该类别的记录不仅服务于百科式问答，也用于图片输入后的语义检索和图文联合解释。在系统中，鲨鱼被组织为物种卡片、文本知识 chunk、图片 caption 和图文配对记录四种知识单元。用户可以询问“鲨鱼是什么”“鲨鱼有什么特点”“图片中的生物是否可能是鲨鱼”等问题。回答时，Agent 会优先检索该类别的总览、视觉特征、栖息环境和相似物种区分信息，再结合用户问题或上传图片描述生成解释。鲨鱼通常具有流线型身体、背鳍、尾鳍和较明显的头部轮廓。水下图像中常表现为中大型游动鱼类，身体侧影稳定，背鳍和尾鳍是重要识别特征。 这类信息可以帮助模型把抽象物种名称转换为可检索、可比较、可解释的视觉和生态线索。\n鲨鱼在水下图像中的视觉识别应关注整体形态、边缘轮廓、身体结构、颜色纹理和所处背景。鲨鱼通常具有流线型身体、背鳍、尾鳍和较明显的头部轮廓。水下图像中常表现为中大型游动鱼类，身体侧影稳定，背鳍和尾鳍是重要识别特征。 由于水下图像经常存在偏蓝、偏绿、低对比度、浑浊和局部模糊等问题，颜色信息并不总是可靠。因此，在多模态 RAG 中，图片 caption 应尽量描述稳定的形状线索，例如身体是否扁平、是否具有触手、是否呈圆形或放射状、是否有鳍、甲壳、腕足、棘刺或长触角。当用户上传图片时，VLM 生成的 caption 会与这一视觉特征 chunk 共同检索，用于判断图片中的目标是否与鲨鱼相似。\n鲨鱼的栖息环境是判断图片语义的重要辅助信息。鲨鱼分布范围很广，从近岸、珊瑚礁、外海到深海都有不同种类。它们常出现在开放水体、礁区边缘或食物资源丰富区域。 在多模态 RAG 场景中，环境信息可以帮助 Agent 判断图片中的背景是否与候选物种一致。例如，如果图片描述中出现海底岩石、珊瑚礁、沙地、海草床、洞穴、开放水体或漂浮姿态，这些信息会影响候选物种的排序。不过，栖息环境不能作为唯一依据，因为同一物种可能出现在多种水下环境中，而不同物种也可能共享相似背景。因此，本 chunk 主要用于补充判断和生成更自然的解释。",
+      "score": 0.704135,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "species_id": "shark",
+        "modality": "image_text_pair",
+        "text_ids": "[\"text_shark_overview\", \"text_shark_visual_features\", \"text_shark_habitat\"]",
+        "source_type": "multimodal_pair",
+        "image_id": "img_shark_004"
+      }
+    },
+    {
+      "evidence_id": "E20",
+      "id": "img_shark_002",
+      "source_system": "image_retrieval",
+      "source_type": "image_doc",
+      "title": "img_shark_002",
+      "content": "Tiger shark, Bahamas",
+      "score": 0.646687,
+      "page": null,
+      "image_path": "data/mrag/images/shark/img_shark_002.jpg",
+      "image_url": "/files/data/mrag/images/shark/img_shark_002.jpg",
+      "metadata": {
+        "image_path": "data/mrag/images/shark/img_shark_002.jpg",
+        "bing_discovery_url": "https://www.bing.com/images/search?q=Shark+underwater",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Tiger_shark.jpg",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source_type": "image_doc",
+        "species_id": "shark",
+        "modality": "image_caption",
+        "author": "Albert kok"
+      }
+    },
+    {
+      "evidence_id": "E21",
+      "id": "img_shark_007",
+      "source_system": "image_retrieval",
+      "source_type": "image_doc",
+      "title": "img_shark_007",
+      "content": "Spinner Shark (Carcharhinus brevipinna) on 2021/01/04 6:14 PM SAST",
+      "score": 0.646371,
+      "page": null,
+      "image_path": "data/mrag/images/shark/img_shark_007.jpg",
+      "image_url": "/files/data/mrag/images/shark/img_shark_007.jpg",
+      "metadata": {
+        "modality": "image_caption",
+        "license": "CC-BY-NC",
+        "species_id": "shark",
+        "author": "(c) Carika Van Zyl, some rights reserved (CC BY-NC)",
+        "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "bing_discovery_url": "https://www.bing.com/images/search?q=Shark+underwater",
+        "source_type": "image_doc",
+        "source_page": "https://www.inaturalist.org/observations/89471124",
+        "image_path": "data/mrag/images/shark/img_shark_007.jpg"
+      }
+    }
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "node": "session_init",
+      "event": "completed",
+      "detail": "verify_shark_distribution_map_v2"
+    },
+    {
+      "step": 2,
+      "node": "memory_load",
+      "event": "completed",
+      "detail": "1"
+    },
+    {
+      "step": 3,
+      "node": "followup_resolver",
+      "event": "completed",
+      "detail": "True:shark:normal"
+    },
+    {
+      "step": 4,
+      "node": "router",
+      "event": "completed",
+      "detail": "followup_text_qa"
+    },
+    {
+      "step": 5,
+      "node": "query_rewrite",
+      "event": "completed",
+      "detail": "query_rewrite"
+    },
+    {
+      "step": 6,
+      "node": "source_selection",
+      "event": "completed",
+      "detail": "text_retriever,image_retriever,pdf_image_retriever"
+    },
+    {
+      "step": 7,
+      "node": "react_tool_plan",
+      "event": "completed",
+      "detail": "step=1;mode=native_function_calling;tools=text_retriever,image_retriever,pdf_image_retriever"
+    },
+    {
+      "step": 8,
+      "node": "retrieval",
+      "event": "completed",
+      "detail": "text=9,web=0,image=13,pair=0,pdf=0,mcp_graph=0,mcp_pdf_images=0,filter_species=shark,elapsed=3.65s"
+    },
+    {
+      "step": 9,
+      "node": "rerank",
+      "event": "completed",
+      "detail": "weighted:21"
+    },
+    {
+      "step": 10,
+      "node": "context_builder",
+      "event": "completed",
+      "detail": "21"
+    },
+    {
+      "step": 11,
+      "node": "answer_generation",
+      "event": "completed",
+      "detail": "qwen:qwen3.7-plus:16.75s"
+    },
+    {
+      "step": 12,
+      "node": "response_guard",
+      "event": "completed",
+      "detail": "normal"
+    },
+    {
+      "step": 13,
+      "node": "evaluation",
+      "event": "completed",
+      "detail": "True:1.00"
+    },
+    {
+      "step": 14,
+      "node": "finalize",
+      "event": "completed",
+      "detail": "finalize"
+    },
+    {
+      "step": 15,
+      "node": "memory_save",
+      "event": "completed",
+      "detail": "1"
+    },
+    {
+      "step": 16,
+      "node": "api",
+      "event": "completed",
+      "detail": "latency_ms=25615"
+    },
+    {
+      "step": 17,
+      "node": "image_role_guard",
+      "event": "completed",
+      "detail": "requested=distribution_map;selected=distribution_map;source=wikimedia_commons"
+    },
+    {
+      "step": 18,
+      "node": "network_image_answer_rewrite",
+      "event": "completed",
+      "detail": "qwen:qwen3.7-plus"
+    }
+  ],
+  "warnings": [],
+  "memory": {
+    "last_species_ids": [
+      "shark"
+    ],
+    "last_species_names": [
+      "鲨鱼"
+    ],
+    "last_image_path": "",
+    "last_image_caption": "",
+    "last_answer_summary": "鲨鱼的分布范围非常广泛，从近岸、珊瑚礁、外海到深海均有不同种类的分布，它们常出现在开放水体、礁区边缘或食物资源丰富的区域[E2, E3, E9]。\n\n关于您需要的分布图，由于当前未检索到相关的分布图图片，因此无法为您直接展示鲨鱼的分布图。如果您需要了解某种特定鲨鱼的分布信息，可以提供更具体的物种名称。",
+    "last_evidence_ids": [
+      "text_shark_overview",
+      "text_shark_ecology_behavior",
+      "text_shark_habitat",
+      "text_shark_image_recognition_tips",
+      "text_shark_taxonomy",
+      "text_shark_rag_usage",
+      "text_shark_visual_features",
+      "text_shark_similar_species",
+      "card_shark",
+      "pair_img_shark_002",
+      "pair_img_shark_007",
+      "pair_img_shark_008"
+    ]
+  },
+  "route": {
+    "task_type": "followup_text_qa",
+    "need_vlm": false,
+    "need_text_retrieval": true,
+    "need_image_retrieval": true,
+    "need_multimodal_retrieval": false,
+    "need_pdf_retrieval": false
+  },
+  "model": {
+    "provider": "qwen",
+    "name": "qwen3.7-plus",
+    "called": true,
+    "fallback": false
+  },
+  "pending_review": false,
+  "raw_state": null
+}

@@ -1,0 +1,444 @@
+{
+  "session_id": "sess_528a06b8dd0d",
+  "turn_id": "turn_ef591e3ffd87",
+  "answer": "关于海星的天敌，根据知识库记录，海星在自然界中的捕食者（天敌）主要包括：同类、海葵、其他种类的海星、法螺、螃蟹、鱼类、海鸥以及海獭[E10]。为了防御这些天敌，海星的第一道防线通常是体壁中含有的皂苷等具有不良味道的化学物质，部分种类还会利用毒素或分泌大量驱避性黏液来进行自我保护[E10]。\n\n关于天敌的图片，系统为您检索到了海星天敌之一——**海獭**（Sea otter）的图片[E13]。海獭是一种海洋哺乳动物，海星等底栖无脊椎动物是其常见的食物来源之一。目前，前端图库已为您展示了这张海獭的参考图片，请您直接在前端界面中查看。",
+  "answer_type": "image_gallery",
+  "images": [
+    {
+      "image_id": "network_aa6b3e620425",
+      "image_path": "data/mrag/network_images/674a920d9df2bfe9/aa6b3e620425610e.jpg",
+      "image_url": "/files/data/mrag/network_images/674a920d9df2bfe9/aa6b3e620425610e.jpg",
+      "caption": "File:Sea-otter-morro-bay 13.jpg",
+      "scientific_name": "Sea otter",
+      "common_name": "",
+      "page": null,
+      "score": 0.25,
+      "image_role": "specimen",
+      "source": "wikimedia_commons",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Sea-otter-morro-bay_13.jpg",
+      "license": "CC BY 2.0"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "id": "text_starfish_overview",
+      "source_system": "chroma",
+      "source_type": "species_text_chunk",
+      "title": "总体介绍",
+      "content": "海星（Starfish）是本水下生物多模态 RAG 知识库中的一个核心类别。该类别的记录不仅服务于百科式问答，也用于图片输入后的语义检索和图文联合解释。在系统中，海星被组织为物种卡片、文本知识 chunk、图片 caption 和图文配对记录四种知识单元。用户可以询问“海星是什么”“海星有什么特点”“图片中的生物是否可能是海星”等问题。回答时，Agent 会优先检索该类别的总览、视觉特征、栖息环境和相似物种区分信息，再结合用户问题或上传图片描述生成解释。海星通常呈星形或放射状，中央盘明显，向外伸出五条或更多腕足。体表可能有颗粒、短刺或粗糙纹理，颜色从橙色、红色、褐色到灰色不等。在水下图像中，它的外轮廓通常比鱼类更固定，运动姿态也不明显。 这类信息可以帮助模型把抽象物种名称转换为可检索、可比较、可解释的视觉和生态线索。",
+      "score": 0.779817,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Starfish",
+        "title": "总体介绍",
+        "species_id": "starfish",
+        "chunk_type": "overview",
+        "source_type": "species_text_chunk",
+        "modality": "text",
+        "worms_url": "https://www.marinespecies.org/rest/AphiaRecordsByName/Asteroidea"
+      }
+    },
+    {
+      "evidence_id": "E2",
+      "id": "text_starfish_taxonomy",
+      "source_system": "chroma",
+      "source_type": "species_text_chunk",
+      "title": "分类学信息",
+      "content": "海星（Starfish）在本知识库中的科学名称或上级分类记录为 Asteroidea，分类组字段记录为 Echinodermata / Asteroidea。分类学信息的作用不是直接完成图片识别，而是为 RAG 系统提供稳定的实体锚点。当不同来源使用不同名称时，例如英文俗名、中文名、科学分类名或数据集类别名，系统可以通过 species_id 将它们映射到同一物种知识单元。在后续扩展中，该字段可由 WoRMS API 补充 AphiaID、有效学名、rank、kingdom、phylum、class、order、family、genus 等信息。在回答涉及“属于什么类群”“和哪些生物亲缘较近”“为什么这个类别叫这个名字”的问题时，Agent 会把 taxonomy chunk 与 overview、visual_features chunk 一起作为上下文。",
+      "score": 0.751679,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "source_type": "species_text_chunk",
+        "worms_url": "https://www.marinespecies.org/rest/AphiaRecordsByName/Asteroidea",
+        "chunk_type": "taxonomy",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Starfish",
+        "modality": "text",
+        "title": "分类学信息",
+        "species_id": "starfish"
+      }
+    },
+    {
+      "evidence_id": "E3",
+      "id": "text_starfish_image_recognition_tips",
+      "source_system": "chroma",
+      "source_type": "species_text_chunk",
+      "title": "图像识别提示",
+      "content": "在基于图片的水下生物识别问答中，海星的识别流程建议分为三步。第一步由 VLM 对上传图片生成 caption，重点描述主体形状、颜色、附属结构、背景环境和是否存在水下退化问题。第二步使用 caption 检索 image_doc 和 multimodal_pair，找到与描述相似的历史图片记录和对应物种。第三步根据候选 species_id 检索 海星 的 overview、visual_features、habitat 和 similar_species chunk，构造最终回答上下文。对海星而言，识别时应特别关注：海星通常呈星形或放射状，中央盘明显，向外伸出五条或更多腕足。体表可能有颗粒、短刺或粗糙纹理，颜色从橙色、红色、褐色到灰色不等。在水下图像中，它的外轮廓通常比鱼类更固定，运动姿态也不明显。 如果图片模糊、目标被遮挡或背景复杂，应输出低置信度解释。",
+      "score": 0.74098,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "title": "图像识别提示",
+        "source_type": "species_text_chunk",
+        "species_id": "starfish",
+        "chunk_type": "image_recognition_tips",
+        "worms_url": "https://www.marinespecies.org/rest/AphiaRecordsByName/Asteroidea",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Starfish",
+        "modality": "text"
+      }
+    },
+    {
+      "evidence_id": "E4",
+      "id": "text_starfish_visual_features",
+      "source_system": "chroma",
+      "source_type": "species_text_chunk",
+      "title": "视觉特征",
+      "content": "海星在水下图像中的视觉识别应关注整体形态、边缘轮廓、身体结构、颜色纹理和所处背景。海星通常呈星形或放射状，中央盘明显，向外伸出五条或更多腕足。体表可能有颗粒、短刺或粗糙纹理，颜色从橙色、红色、褐色到灰色不等。在水下图像中，它的外轮廓通常比鱼类更固定，运动姿态也不明显。 由于水下图像经常存在偏蓝、偏绿、低对比度、浑浊和局部模糊等问题，颜色信息并不总是可靠。因此，在多模态 RAG 中，图片 caption 应尽量描述稳定的形状线索，例如身体是否扁平、是否具有触手、是否呈圆形或放射状、是否有鳍、甲壳、腕足、棘刺或长触角。当用户上传图片时，VLM 生成的 caption 会与这一视觉特征 chunk 共同检索，用于判断图片中的目标是否与海星相似。",
+      "score": 0.736364,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Starfish",
+        "title": "视觉特征",
+        "worms_url": "https://www.marinespecies.org/rest/AphiaRecordsByName/Asteroidea",
+        "modality": "text",
+        "source_type": "species_text_chunk",
+        "chunk_type": "visual_features",
+        "species_id": "starfish"
+      }
+    },
+    {
+      "evidence_id": "E5",
+      "id": "text_starfish_habitat",
+      "source_system": "chroma",
+      "source_type": "species_text_chunk",
+      "title": "栖息环境",
+      "content": "海星的栖息环境是判断图片语义的重要辅助信息。海星常见于潮间带、浅海海底、岩石、珊瑚礁、海草床和沙泥底环境。不同类群可以分布在较浅海域到深海区域，常贴附在海底表面或缓慢移动。 在多模态 RAG 场景中，环境信息可以帮助 Agent 判断图片中的背景是否与候选物种一致。例如，如果图片描述中出现海底岩石、珊瑚礁、沙地、海草床、洞穴、开放水体或漂浮姿态，这些信息会影响候选物种的排序。不过，栖息环境不能作为唯一依据，因为同一物种可能出现在多种水下环境中，而不同物种也可能共享相似背景。因此，本 chunk 主要用于补充判断和生成更自然的解释。",
+      "score": 0.732633,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "worms_url": "https://www.marinespecies.org/rest/AphiaRecordsByName/Asteroidea",
+        "modality": "text",
+        "source_type": "species_text_chunk",
+        "title": "栖息环境",
+        "species_id": "starfish",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Starfish",
+        "chunk_type": "habitat"
+      }
+    },
+    {
+      "evidence_id": "E6",
+      "id": "text_starfish_ecology_behavior",
+      "source_system": "chroma",
+      "source_type": "species_text_chunk",
+      "title": "生态行为",
+      "content": "海星的生态和行为信息可以让问答结果更丰富，也能帮助系统解释图片中可能出现的姿态或场景。海星多为底栖动物，移动速度较慢，可捕食双壳类、小型无脊椎动物或腐食。部分种类具有再生能力，腕足受损后可以在一定条件下恢复。 在普通文本问答中，这部分知识可回答“它如何生活”“主要吃什么”“为什么会出现在某种环境中”等问题。在图像问答中，行为信息可辅助解释目标为什么贴近海底、为什么漂浮在水体中、为什么隐藏在洞穴或附着在岩石上。需要注意的是，单张图片通常不能可靠推断完整行为，Agent 在回答时应使用“可能”“通常”“常见”等表达，避免把知识库中的一般规律说成当前图片的绝对事实。",
+      "score": 0.73261,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "modality": "text",
+        "title": "生态行为",
+        "worms_url": "https://www.marinespecies.org/rest/AphiaRecordsByName/Asteroidea",
+        "source_type": "species_text_chunk",
+        "chunk_type": "ecology_behavior",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Starfish",
+        "species_id": "starfish"
+      }
+    },
+    {
+      "evidence_id": "E7",
+      "id": "text_starfish_similar_species",
+      "source_system": "chroma",
+      "source_type": "species_text_chunk",
+      "title": "相似物种区分",
+      "content": "海星在水下图像中可能与若干相似物种或背景结构混淆。海星容易与珊瑚碎块、海底岩石阴影、海参或扇贝外壳混淆。识别时应重点关注放射状腕足、中央盘以及整体星形轮廓，而不是单独依赖颜色。 相似物种区分是多模态 RAG 的重点，因为用户上传图片时，VLM caption 往往只能描述形状和背景，未必能直接给出准确类别。系统应将海星的相似类别与视觉特征一起检索，比较目标的轮廓、附属结构、运动姿态和环境关系。当证据不足时，回答应给出候选类别和不确定原因，而不是强行判断。该 chunk 适合回答“它和另一类生物有什么区别”“为什么不是某某类别”“图片中目标是否可能被误认”等问题。",
+      "score": 0.72405,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Starfish",
+        "title": "相似物种区分",
+        "chunk_type": "similar_species",
+        "modality": "text",
+        "source_type": "species_text_chunk",
+        "worms_url": "https://www.marinespecies.org/rest/AphiaRecordsByName/Asteroidea",
+        "species_id": "starfish"
+      }
+    },
+    {
+      "evidence_id": "E8",
+      "id": "card_starfish",
+      "source_system": "chroma",
+      "source_type": "species_card",
+      "title": "Asteroidea",
+      "content": "海星（Starfish，Asteroidea）是水下生物多模态 RAG 系统中可作为识别、检索和问答对象的一类生物或生物群。从分类角度看，它可归入 Echinodermata / Asteroidea。在构建知识库时，系统需要同时保存中文名、英文名、科学名称、分类层级、视觉特征、栖息环境、生态行为和相似物种信息，这样用户无论是输入文本问题还是上传图片，都可以通过统一的物种标识进行检索和上下文聚合。海星通常呈星形或放射状，中央盘明显，向外伸出五条或更多腕足。体表可能有颗粒、短刺或粗糙纹理，颜色从橙色、红色、褐色到灰色不等。在水下图像中，它的外轮廓通常比鱼类更固定，运动姿态也不明显。 海星常见于潮间带、浅海海底、岩石、珊瑚礁、海草床和沙泥底环境。不同类群可以分布在较浅海域到深海区域，常贴附在海底表面或缓慢移动。 海星多为底栖动物，移动速度较慢，可捕食双壳类、小型无脊椎动物或腐食。部分种类具有再生能力，腕足受损后可以在一定条件下恢复。 在图像问答场景中，海星的识别不能只依靠单一颜色或单一局部纹理，而应结合整体轮廓、身体结构、典型环境和与相似类别的差异。海星容易与珊瑚碎块、海底岩石阴影、海参或扇贝外壳混淆。识别时应重点关注放射状腕足、中央盘以及整体星形轮廓，而不是单独依赖颜色。 因此，本物种卡片在项目中既用于普通百科问答，也用于图片 caption 检索后的候选物种解释、相似物种区分和最终回答生成。",
+      "score": 0.723509,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "english_name": "Starfish",
+        "modality": "species_card",
+        "chunk_type": "species_card",
+        "scientific_name": "Asteroidea",
+        "worms_url": "https://www.marinespecies.org/rest/AphiaRecordsByName/Asteroidea",
+        "worms_status": 200,
+        "chinese_name": "海星",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Starfish",
+        "species_id": "starfish",
+        "wikipedia_extract": "Starfish or sea stars are a class of marine invertebrates generally shaped like a star polygon. Starfish are also known as asteroids because they form the taxonomic class Asteroidea. About 1,900 species of starfish live on the seabed, and are found in all the world's oceans, from warm, tropical zones to frigid, polar regions. They can occur from the intertidal zone down to abyssal depths, at 6,000 m (20,000 ft) below the surface.",
+        "source_type": "species_card"
+      }
+    },
+    {
+      "evidence_id": "E9",
+      "id": "text_starfish_rag_usage",
+      "source_system": "chroma",
+      "source_type": "species_text_chunk",
+      "title": "RAG使用说明",
+      "content": "在 AquaBio-MRAG 项目中，海星相关知识主要用于三类任务。第一类是纯文本问答，例如询问海星的分类、外观、栖息环境和生态行为；第二类是图片问答，即用户上传水下图片后，系统根据 caption 检索与海星相关的图文配对记录；第三类是相似物种区分，例如比较海星与其他水下生物在形态、背景和识别线索上的差异。为了提高回答质量，检索时不应只返回一个 chunk，而应聚合 species_card、visual_features、habitat、similar_species 和 multimodal_pair。最终由 Answer Agent 综合用户原问题、图片 caption、检索上下文和来源元数据生成回答。",
+      "score": 0.718818,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "species_id": "starfish",
+        "modality": "text",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Starfish",
+        "chunk_type": "rag_usage",
+        "worms_url": "https://www.marinespecies.org/rest/AphiaRecordsByName/Asteroidea",
+        "title": "RAG使用说明",
+        "source_type": "species_text_chunk"
+      }
+    },
+    {
+      "evidence_id": "E10",
+      "id": "web_wikipedia_6c37dd5fda88",
+      "source_system": "wikipedia_api",
+      "source_type": "web_knowledge",
+      "title": "Starfish",
+      "content": "Starfish may be preyed on by conspecifics, sea anemones, other starfish species, tritons, crabs, fish, gulls, and sea otters. Their first lines of defence are the saponins present in their body walls, which have unpleasant flavours. Some starfish such as Astropecten polyacanthus also include powerful toxins such as tetrodotoxin, while the slime star can ooze out large quantities of repellent mucus. The crown-of-thorns starfish possesses sharp spines, toxins and bright warning colours.\nStarfish produce a large number of secondary metabolites in the form of lipids, including steroidal derivatives of cholesterol, and fatty acid amides of sphingosine. The steroids are mostly saponins, known as asterosaponins, and their sulphated derivatives. They vary across species and are typically formed from up to six sugar molecules (usually glucose and galactose) connected by up to three glycosidic chains. Long-chain fatty acid amides of sphingosine occur frequently, with some having known biological activity. Starfish also contain various ceramides and a small number of alkaloids. These chemicals in the starfish may function in defence and communication. Some are feeding deterrents used by the starfish to discourage predation. Others are antifoulants and supplement the pedicellariae to prevent other organisms from settling on the starfish's aboral surface. Some are alarm pheromones and escape-eliciting chemicals, the release of which trigger responses in starfish of the same species, but often stimulate flight in potential prey. Research into the efficacy of these compounds for possible pharmacological or industrial use occurs worldwide.\nStarfish are keystone species in their respective marine communities. Their relatively large sizes, diverse diets, and ability to adapt to different",
+      "score": 0.9,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "source_type": "web_knowledge",
+        "retrieval_source": "wikipedia_api",
+        "title": "Starfish",
+        "source_page": "https://en.wikipedia.org/wiki/Starfish",
+        "search_query": "Starfish",
+        "rank": 1
+      }
+    },
+    {
+      "evidence_id": "E11",
+      "id": "web_wikipedia_8d0537f59871",
+      "source_system": "wikipedia_api",
+      "source_type": "web_knowledge",
+      "title": "Crown-of-thorns starfish",
+      "content": "The crown-of-thorns starfish (frequently abbreviated to COTS), Acanthaster planci, is a large starfish that preys upon hard, or stony, coral polyps (Scleractinia)",
+      "score": 0.8,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "source_type": "web_knowledge",
+        "retrieval_source": "wikipedia_api",
+        "title": "Crown-of-thorns starfish",
+        "source_page": "https://en.wikipedia.org/wiki/Crown-of-thorns_starfish",
+        "search_query": "Starfish",
+        "rank": 2
+      }
+    },
+    {
+      "evidence_id": "E12",
+      "id": "web_wikipedia_33755b42c390",
+      "source_system": "wikipedia_api",
+      "source_type": "web_knowledge",
+      "title": "Starfish (disambiguation)",
+      "content": "Look up starfish in Wiktionary, the free dictionary. Starfish are a group of marine invertebrates. Starfish may also refer to: Starfish (1952 film), an",
+      "score": 0.7,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "source_type": "web_knowledge",
+        "retrieval_source": "wikipedia_api",
+        "title": "Starfish (disambiguation)",
+        "source_page": "https://en.wikipedia.org/wiki/Starfish_(disambiguation)",
+        "search_query": "Starfish",
+        "rank": 3
+      }
+    },
+    {
+      "evidence_id": "E13",
+      "id": "network_aa6b3e620425",
+      "source_system": "wikimedia_commons",
+      "source_type": "network_image",
+      "title": "Sea otter",
+      "content": "File:Sea-otter-morro-bay 13.jpg",
+      "score": 0.25,
+      "page": null,
+      "image_path": "data/mrag/network_images/674a920d9df2bfe9/aa6b3e620425610e.jpg",
+      "image_url": "/files/data/mrag/network_images/674a920d9df2bfe9/aa6b3e620425610e.jpg",
+      "metadata": {
+        "source_type": "network_image",
+        "retrieval_source": "wikimedia_commons",
+        "modality": "image",
+        "image_path": "data/mrag/network_images/674a920d9df2bfe9/aa6b3e620425610e.jpg",
+        "image_role": "specimen",
+        "scientific_name": "Sea otter",
+        "common_name": "",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Sea-otter-morro-bay_13.jpg",
+        "license": "CC BY 2.0"
+      }
+    }
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "node": "session_init",
+      "event": "completed",
+      "detail": "sess_528a06b8dd0d"
+    },
+    {
+      "step": 2,
+      "node": "memory_load",
+      "event": "completed",
+      "detail": "3"
+    },
+    {
+      "step": 3,
+      "node": "followup_resolver",
+      "event": "completed",
+      "detail": "True:starfish:normal"
+    },
+    {
+      "step": 4,
+      "node": "router",
+      "event": "completed",
+      "detail": "followup_text_qa"
+    },
+    {
+      "step": 5,
+      "node": "query_rewrite",
+      "event": "completed",
+      "detail": "query_rewrite"
+    },
+    {
+      "step": 6,
+      "node": "source_selection",
+      "event": "completed",
+      "detail": "text_retriever,image_retriever,pdf_image_retriever"
+    },
+    {
+      "step": 7,
+      "node": "react_tool_plan",
+      "event": "completed",
+      "detail": "1:text_retriever,image_retriever,pdf_image_retriever"
+    },
+    {
+      "step": 8,
+      "node": "retrieval",
+      "event": "completed",
+      "detail": "text=9,web=3,image=1,pair=0,pdf=0,mcp_pdf_images=8,filter_species=starfish,elapsed=28.91s"
+    },
+    {
+      "step": 9,
+      "node": "web_plan",
+      "event": "completed",
+      "detail": "search=Starfish;image=Sea otter"
+    },
+    {
+      "step": 10,
+      "node": "rerank",
+      "event": "completed",
+      "detail": "weighted:13"
+    },
+    {
+      "step": 11,
+      "node": "context_builder",
+      "event": "completed",
+      "detail": "13"
+    },
+    {
+      "step": 12,
+      "node": "answer_generation",
+      "event": "completed",
+      "detail": "qwen:qwen3.7-plus:25.64s"
+    },
+    {
+      "step": 13,
+      "node": "response_guard",
+      "event": "completed",
+      "detail": "normal"
+    },
+    {
+      "step": 14,
+      "node": "evaluation",
+      "event": "completed",
+      "detail": "True:1.00"
+    },
+    {
+      "step": 15,
+      "node": "finalize",
+      "event": "completed",
+      "detail": "finalize"
+    },
+    {
+      "step": 16,
+      "node": "memory_save",
+      "event": "completed",
+      "detail": "1"
+    },
+    {
+      "step": 17,
+      "node": "api",
+      "event": "completed",
+      "detail": "latency_ms=56110"
+    }
+  ],
+  "warnings": [],
+  "memory": {
+    "last_species_ids": [
+      "starfish"
+    ],
+    "last_species_names": [
+      "海星"
+    ],
+    "last_image_path": "F:\\rag\\AquaBio-AgentRAG\\data\\mrag\\images\\starfish\\img_starfish_006.jpg",
+    "last_image_caption": "Starfish of Mediterranean red sea star species (Echinaster sepositus).",
+    "last_answer_summary": "关于海星的天敌，根据知识库记录，海星在自然界中的捕食者（天敌）主要包括：同类、海葵、其他种类的海星、法螺、螃蟹、鱼类、海鸥以及海獭[E10]。为了防御这些天敌，海星的第一道防线通常是体壁中含有的皂苷等具有不良味道的化学物质，部分种类还会利用毒素或分泌大量驱避性黏液来进行自我保护[E10]。\n\n关于天敌的图片，系统为您检索到了海星天敌之一——**海獭**（Sea otter）的图片[E13]。海獭是一种海洋哺乳动物，海星等底栖无脊椎动物是其常见的食物来源之一。目前，前端图库已为您展示了这张海獭的参考图片，请您直接在前端界面中查看。",
+    "last_evidence_ids": [
+      "text_starfish_overview",
+      "text_starfish_taxonomy",
+      "text_starfish_image_recognition_tips",
+      "text_starfish_visual_features",
+      "text_starfish_habitat",
+      "text_starfish_ecology_behavior",
+      "text_starfish_similar_species",
+      "card_starfish",
+      "text_starfish_rag_usage",
+      "network_aa6b3e620425"
+    ]
+  },
+  "route": {
+    "task_type": "followup_text_qa",
+    "need_vlm": false,
+    "need_text_retrieval": true,
+    "need_image_retrieval": true,
+    "need_multimodal_retrieval": false,
+    "need_pdf_retrieval": false
+  },
+  "model": {
+    "provider": "qwen",
+    "name": "qwen3.7-plus",
+    "called": true,
+    "fallback": false
+  },
+  "pending_review": false,
+  "raw_state": null
+}

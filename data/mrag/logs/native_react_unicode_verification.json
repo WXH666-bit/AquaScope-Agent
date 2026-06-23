@@ -1,0 +1,951 @@
+{
+  "session_id": "verify_native_react_unicode",
+  "turn_id": "turn_0f232f1988c8",
+  "answer": "根据 RAG-Anything MCP 的 PDF 知识图谱证据，海星与海胆的外观特征比较如下：\n\n**1. 共同外观特征**\n海星与海胆均属于**棘皮动物门（Echinodermata）** [E4]。作为该门成员，它们共享一些基础的外观与解剖特征，包括：星状/星形身体（stellate body，注：此为门级共性描述）、网状骨骼（reticular skeleton）、突起的刺（raised spines）、管足（tube feet）以及白色的筛板（white madreporite）[E4]。\n\n**2. 海星（Starfish / Asteroidea）的具体外观特征**\n海星纲物种在形态、质感和颜色上表现出丰富的特异性：\n*   **体型与形状**：通常呈星形，部分种类呈现明显的**五角星体型**（pentagonal body shape）和**垫状身体**（cushion-like body）[E1, E8]；也有种类身体呈现**膨胀**状态（inflates）[E2, E3]。\n*   **表面质感与颜色**：体表可能具有**皮革质感**（leathery）[E2, E3]；反口面（背面）颜色多样，例如呈现**亮粉色至橙色**（bright pink to orange aboral color）[E8]。\n*   **腕部特征**：某些种类（如 *Luidia sarsii africana*）的腕（arms）非常脆弱，**极易从中央盘折断**（break off easily from the central disc）[E7, E9]。\n\n**3. 海胆（Sea urchins）的外观特征**\n在当前的检索证据中，仅明确提及海胆属于棘皮动物门 [E4]，**并未提供海胆区别于海星的具体独特外观特征**（如典型的球形轮廓或密集的长棘刺等）。因此，严格基于现有证据，只能确认海胆具备上述棘皮动物门的共同特征（如突起的刺、管足等）[E4]。\n\n**证据来源说明：**\n*   **门级共性特征**：来源于知识图谱中关于“Echinodermata（棘皮动物门）”的实体描述，明确指出了该门包含海星和海胆，并列举了网状骨骼、突起的刺、管足等共性特征 [E4]。\n*   **海星特异性特征**：来源于具体海星物种的实体及分类表描述，包括 *Chondraster elattosis*（五角星体型、垫状、亮粉至橙色）[E1, E8]、*Spoladaster veneris*（膨胀、皮革质感）[E2, E3]，以及 *Luidia sarsii africana*（腕易折断）[E7, E9]。",
+  "answer_type": "text",
+  "images": [],
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "id": "graph_neighbor_1_Taxonomic classification of Chondraster elattosis (Pentagon star) (table)",
+      "source_system": "lightrag_graph",
+      "source_type": "lightrag_graph",
+      "title": "F:\\rag\\AquaBio-AgentRAG\\data\\mrag\\raganything\\working\\graph_chunk_entity_relation.graphml",
+      "content": "Graph entity: Taxonomic classification of Chondraster elattosis (Pentagon star) (table)\nA two-column taxonomic hierarchy table for Chondraster elattosis, listing ranks from Phylum (Echinodermata) to Common name (Pentagon star). It supports the adjacent species description, reinforcing the pentagonal shape and providing formal classification that contextualizes the distribution, size, colour, and distinguishing features detailed on page 430 of the field guide.\nEchinodermata -> Taxonomic classification of Chondraster elattosis (Pentagon star) (table): Entity Echinodermata belongs to Taxonomic classification of Chondraster elattosis (Pentagon star) (table)\nTaxonomic classification of Chondraster elattosis (Pentagon star) (table) -> Chondraster elattosis: Entity Chondraster elattosis belongs to Taxonomic classification of Chondraster elattosis (Pentagon star) (table)\nTaxonomic classification of Chondraster elattosis (Pentagon star) (table) -> Asteroidea: Entity Asteroidea belongs to Taxonomic classification of Chondraster elattosis (Pentagon star) (table)\nTaxonomic classification of Chondraster elattosis (Pentagon star) (table) -> Valvatida: Entity Valvatida belongs to Taxonomic classification of Chondraster elattosis (Pentagon star) (table)",
+      "score": 0.00819672131147541,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "relations": [
+          {
+            "source": "Echinodermata",
+            "target": "Taxonomic classification of Chondraster elattosis (Pentagon star) (table)",
+            "weight": "10.0",
+            "description": "Entity Echinodermata belongs to Taxonomic classification of Chondraster elattosis (Pentagon star) (table)",
+            "keywords": "belongs_to,contained_in,part_of",
+            "source_id": "chunk-c2277bdb0cfb9e13e612107b546b5702",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097636",
+            "truncate": ""
+          },
+          {
+            "source": "Taxonomic classification of Chondraster elattosis (Pentagon star) (table)",
+            "target": "Chondraster elattosis",
+            "weight": "10.0",
+            "description": "Entity Chondraster elattosis belongs to Taxonomic classification of Chondraster elattosis (Pentagon star) (table)",
+            "keywords": "belongs_to,contained_in,part_of",
+            "source_id": "chunk-c2277bdb0cfb9e13e612107b546b5702",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097636",
+            "truncate": ""
+          },
+          {
+            "source": "Taxonomic classification of Chondraster elattosis (Pentagon star) (table)",
+            "target": "Asteroidea",
+            "weight": "10.0",
+            "description": "Entity Asteroidea belongs to Taxonomic classification of Chondraster elattosis (Pentagon star) (table)",
+            "keywords": "belongs_to,contained_in,part_of",
+            "source_id": "chunk-c2277bdb0cfb9e13e612107b546b5702",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097637",
+            "truncate": ""
+          },
+          {
+            "source": "Taxonomic classification of Chondraster elattosis (Pentagon star) (table)",
+            "target": "Valvatida",
+            "weight": "10.0",
+            "description": "Entity Valvatida belongs to Taxonomic classification of Chondraster elattosis (Pentagon star) (table)",
+            "keywords": "belongs_to,contained_in,part_of",
+            "source_id": "chunk-c2277bdb0cfb9e13e612107b546b5702",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097637",
+            "truncate": ""
+          }
+        ],
+        "fused_sources": [
+          "graph"
+        ],
+        "doc_id": "",
+        "page": null,
+        "doc_title": "F:\\rag\\AquaBio-AgentRAG\\data\\mrag\\raganything\\working\\graph_chunk_entity_relation.graphml",
+        "source_type": "lightrag_graph",
+        "modality": "mixed",
+        "entity_names": [
+          "Asteroidea",
+          "Taxonomic classification of Chondraster elattosis (Pentagon star) (table)"
+        ],
+        "relation_path": [
+          "Echinodermata",
+          "Entity Echinodermata belongs to Taxonomic classification of Chondraster elattosis (Pentagon star) (table)",
+          "Taxonomic classification of Chondraster elattosis (Pentagon star) (table)"
+        ],
+        "retrieval_source": "lightrag_graph"
+      }
+    },
+    {
+      "evidence_id": "E2",
+      "id": "graph_neighbor_2_Spoladaster veneris taxonomic classification table (table)",
+      "source_system": "lightrag_graph",
+      "source_type": "lightrag_graph",
+      "title": "F:\\rag\\AquaBio-AgentRAG\\data\\mrag\\raganything\\working\\graph_chunk_entity_relation.graphml",
+      "content": "Graph entity: Spoladaster veneris taxonomic classification table (table)\nThis table provides the taxonomic hierarchy (Phylum to Species) and common name for the starfish Spoladaster veneris ('Inflated star'). It is placed within a field guide section that contrasts this species with two similar species (Chondraster ellatosis and Spoladaster brachyactis) based on inflation and leatheriness. The classification confirms its genus (Spoladaster) and distinguishes it from Chondraster, supporting the morphological comparisons in the surrounding text.\nEchinodermata -> Spoladaster veneris taxonomic classification table (table): Entity Echinodermata belongs to Spoladaster veneris taxonomic classification table (table)\nSpoladaster Veneris -> Spoladaster veneris taxonomic classification table (table): Entity Spoladaster Veneris belongs to Spoladaster veneris taxonomic classification table (table)\nSpoladaster veneris taxonomic classification table (table) -> Asteroidea: Entity Asteroidea belongs to Spoladaster veneris taxonomic classification table (table)\nSpoladaster veneris taxonomic classification table (table) -> Valvatida: Entity Valvatida belongs to Spoladaster veneris taxonomic classification table (table)",
+      "score": 0.008064516129032258,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "relations": [
+          {
+            "source": "Echinodermata",
+            "target": "Spoladaster veneris taxonomic classification table (table)",
+            "weight": "10.0",
+            "description": "Entity Echinodermata belongs to Spoladaster veneris taxonomic classification table (table)",
+            "keywords": "belongs_to,contained_in,part_of",
+            "source_id": "chunk-1ff0eb99ae21e17d67fdd1dbba08d515",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097611",
+            "truncate": ""
+          },
+          {
+            "source": "Spoladaster Veneris",
+            "target": "Spoladaster veneris taxonomic classification table (table)",
+            "weight": "10.0",
+            "description": "Entity Spoladaster Veneris belongs to Spoladaster veneris taxonomic classification table (table)",
+            "keywords": "belongs_to,contained_in,part_of",
+            "source_id": "chunk-1ff0eb99ae21e17d67fdd1dbba08d515",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097610",
+            "truncate": ""
+          },
+          {
+            "source": "Spoladaster veneris taxonomic classification table (table)",
+            "target": "Asteroidea",
+            "weight": "10.0",
+            "description": "Entity Asteroidea belongs to Spoladaster veneris taxonomic classification table (table)",
+            "keywords": "belongs_to,contained_in,part_of",
+            "source_id": "chunk-1ff0eb99ae21e17d67fdd1dbba08d515",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097612",
+            "truncate": ""
+          },
+          {
+            "source": "Spoladaster veneris taxonomic classification table (table)",
+            "target": "Valvatida",
+            "weight": "10.0",
+            "description": "Entity Valvatida belongs to Spoladaster veneris taxonomic classification table (table)",
+            "keywords": "belongs_to,contained_in,part_of",
+            "source_id": "chunk-1ff0eb99ae21e17d67fdd1dbba08d515",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097612",
+            "truncate": ""
+          }
+        ],
+        "fused_sources": [
+          "graph"
+        ],
+        "doc_id": "",
+        "page": null,
+        "doc_title": "F:\\rag\\AquaBio-AgentRAG\\data\\mrag\\raganything\\working\\graph_chunk_entity_relation.graphml",
+        "source_type": "lightrag_graph",
+        "modality": "mixed",
+        "entity_names": [
+          "Asteroidea",
+          "Spoladaster veneris taxonomic classification table (table)"
+        ],
+        "relation_path": [
+          "Echinodermata",
+          "Entity Echinodermata belongs to Spoladaster veneris taxonomic classification table (table)",
+          "Spoladaster veneris taxonomic classification table (table)"
+        ],
+        "retrieval_source": "lightrag_graph"
+      }
+    },
+    {
+      "evidence_id": "E3",
+      "id": "graph_neighbor_3_Spoladaster Veneris",
+      "source_system": "lightrag_graph",
+      "source_type": "lightrag_graph",
+      "title": "F:\\rag\\AquaBio-AgentRAG\\data\\mrag\\raganything\\working\\graph_chunk_entity_relation.graphml",
+      "content": "Graph entity: Spoladaster Veneris\nSpoladaster Veneris is a similar species to Chondraster Elattosis; it inflates and is less leathery compared to Chondraster Elattosis.<SEP>Spoladaster veneris is a starfish species with code name SpoBra, belonging to Phylum Echinodermata, Class Asteroidea, Order Valvatida, Family Poraniidae, Genus Spoladaster, and Species veneris. Its common name is Inflated Star.\nEchinodermata -> Spoladaster Veneris: Spoladaster veneris belongs to the phylum Echinodermata.\nSpoladaster Veneris -> Asteroidea: Spoladaster veneris belongs to the class Asteroidea.\nSpoladaster Veneris -> Valvatida: Spoladaster veneris belongs to the order Valvatida.\nSpoladaster Veneris -> Spoladaster veneris taxonomic classification table (table): Entity Spoladaster Veneris belongs to Spoladaster veneris taxonomic classification table (table)",
+      "score": 0.007936507936507936,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "relations": [
+          {
+            "source": "Echinodermata",
+            "target": "Spoladaster Veneris",
+            "weight": "1.0",
+            "description": "Spoladaster veneris belongs to the phylum Echinodermata.",
+            "keywords": "phylum,taxonomic classification",
+            "source_id": "chunk-1ff0eb99ae21e17d67fdd1dbba08d515",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097605",
+            "truncate": ""
+          },
+          {
+            "source": "Spoladaster Veneris",
+            "target": "Asteroidea",
+            "weight": "1.0",
+            "description": "Spoladaster veneris belongs to the class Asteroidea.",
+            "keywords": "class,taxonomic classification",
+            "source_id": "chunk-1ff0eb99ae21e17d67fdd1dbba08d515",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097605",
+            "truncate": ""
+          },
+          {
+            "source": "Spoladaster Veneris",
+            "target": "Valvatida",
+            "weight": "1.0",
+            "description": "Spoladaster veneris belongs to the order Valvatida.",
+            "keywords": "order,taxonomic classification",
+            "source_id": "chunk-1ff0eb99ae21e17d67fdd1dbba08d515",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097605",
+            "truncate": ""
+          },
+          {
+            "source": "Spoladaster Veneris",
+            "target": "Spoladaster veneris taxonomic classification table (table)",
+            "weight": "10.0",
+            "description": "Entity Spoladaster Veneris belongs to Spoladaster veneris taxonomic classification table (table)",
+            "keywords": "belongs_to,contained_in,part_of",
+            "source_id": "chunk-1ff0eb99ae21e17d67fdd1dbba08d515",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097610",
+            "truncate": ""
+          }
+        ],
+        "fused_sources": [
+          "graph"
+        ],
+        "doc_id": "",
+        "page": null,
+        "doc_title": "F:\\rag\\AquaBio-AgentRAG\\data\\mrag\\raganything\\working\\graph_chunk_entity_relation.graphml",
+        "source_type": "lightrag_graph",
+        "modality": "mixed",
+        "entity_names": [
+          "Asteroidea",
+          "Spoladaster Veneris"
+        ],
+        "relation_path": [
+          "Echinodermata",
+          "Spoladaster veneris belongs to the phylum Echinodermata.",
+          "Spoladaster Veneris"
+        ],
+        "retrieval_source": "lightrag_graph"
+      }
+    },
+    {
+      "evidence_id": "E4",
+      "id": "graph_neighbor_4_Echinodermata",
+      "source_system": "lightrag_graph",
+      "source_type": "lightrag_graph",
+      "title": "F:\\rag\\AquaBio-AgentRAG\\data\\mrag\\raganything\\working\\graph_chunk_entity_relation.graphml",
+      "content": "Graph entity: Echinodermata\nEchinodermata is a phylum of marine invertebrates. This taxonomic group includes a diverse array of organisms such as starfish, sea urchins, and related species. All described starfish species belong to this phylum, and specific examples within Echinodermata include *Luidia sarsii africana*, *Chondraster elattosis*, *Spoladaster veneris*, and *Poraniopsis echinaster*. \n\nEchinoderms are characterized by distinctive anatomical features, including a stellate (star-shaped) body, a reticular skeleton, raised spines, tube feet, and a white madreporite. As marine invertebrates, members of this phylum are found in various oceanic environments and are often mentioned in scientific descriptions and imagery contexts. The phylum represents a major group within the animal kingdom, encompassing a wide range of species that share these common morphological traits.\nEchinodermata -> Luidia Sarsii Africana: Luidia sarsii africana is classified under the phylum Echinodermata.\nEchinodermata -> Luidia sarsii africana taxonomic classification table (table): Entity Echinodermata belongs to Luidia sarsii africana taxonomic classification table (table)\nEchinodermata -> Spoladaster Veneris: Spoladaster veneris belongs to the phylum Echinodermata.\nEchinodermata -> Asteroidea: Echinodermata is the phylum that includes the class Asteroidea.",
+      "score": 0.0078125,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "relations": [
+          {
+            "source": "Echinodermata",
+            "target": "Luidia Sarsii Africana",
+            "weight": "1.0",
+            "description": "Luidia sarsii africana is classified under the phylum Echinodermata.",
+            "keywords": "classification,taxonomic hierarchy",
+            "source_id": "chunk-f0f7451703f2287af83a619489c9a745",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097528",
+            "truncate": ""
+          },
+          {
+            "source": "Echinodermata",
+            "target": "Luidia sarsii africana taxonomic classification table (table)",
+            "weight": "10.0",
+            "description": "Entity Echinodermata belongs to Luidia sarsii africana taxonomic classification table (table)",
+            "keywords": "belongs_to,contained_in,part_of",
+            "source_id": "chunk-f0f7451703f2287af83a619489c9a745",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097533",
+            "truncate": ""
+          },
+          {
+            "source": "Echinodermata",
+            "target": "Spoladaster Veneris",
+            "weight": "1.0",
+            "description": "Spoladaster veneris belongs to the phylum Echinodermata.",
+            "keywords": "phylum,taxonomic classification",
+            "source_id": "chunk-1ff0eb99ae21e17d67fdd1dbba08d515",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097605",
+            "truncate": ""
+          },
+          {
+            "source": "Echinodermata",
+            "target": "Asteroidea",
+            "weight": "1.0",
+            "description": "Echinodermata is the phylum that includes the class Asteroidea.",
+            "keywords": "phylum to class,taxonomic hierarchy",
+            "source_id": "chunk-1ff0eb99ae21e17d67fdd1dbba08d515",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097609",
+            "truncate": ""
+          },
+          {
+            "source": "Echinodermata",
+            "target": "Spoladaster veneris taxonomic classification table (table)",
+            "weight": "10.0",
+            "description": "Entity Echinodermata belongs to Spoladaster veneris taxonomic classification table (table)",
+            "keywords": "belongs_to,contained_in,part_of",
+            "source_id": "chunk-1ff0eb99ae21e17d67fdd1dbba08d515",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097611",
+            "truncate": ""
+          },
+          {
+            "source": "Echinodermata",
+            "target": "Chondraster elattosis",
+            "weight": "1.0",
+            "description": "Chondraster elattosis is classified under the phylum Echinodermata.",
+            "keywords": "phylum,taxonomy",
+            "source_id": "chunk-c2277bdb0cfb9e13e612107b546b5702",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097630",
+            "truncate": ""
+          },
+          {
+            "source": "Echinodermata",
+            "target": "Taxonomic classification of Chondraster elattosis (Pentagon star) (table)",
+            "weight": "10.0",
+            "description": "Entity Echinodermata belongs to Taxonomic classification of Chondraster elattosis (Pentagon star) (table)",
+            "keywords": "belongs_to,contained_in,part_of",
+            "source_id": "chunk-c2277bdb0cfb9e13e612107b546b5702",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097636",
+            "truncate": ""
+          }
+        ],
+        "fused_sources": [
+          "graph"
+        ],
+        "doc_id": "",
+        "page": null,
+        "doc_title": "F:\\rag\\AquaBio-AgentRAG\\data\\mrag\\raganything\\working\\graph_chunk_entity_relation.graphml",
+        "source_type": "lightrag_graph",
+        "modality": "mixed",
+        "entity_names": [
+          "Asteroidea",
+          "Echinodermata"
+        ],
+        "relation_path": [
+          "Echinodermata",
+          "Luidia sarsii africana is classified under the phylum Echinodermata.",
+          "Luidia Sarsii Africana"
+        ],
+        "retrieval_source": "lightrag_graph"
+      }
+    },
+    {
+      "evidence_id": "E5",
+      "id": "graph_neighbor_5_Valvatida",
+      "source_system": "lightrag_graph",
+      "source_type": "lightrag_graph",
+      "title": "F:\\rag\\AquaBio-AgentRAG\\data\\mrag\\raganything\\working\\graph_chunk_entity_relation.graphml",
+      "content": "Graph entity: Valvatida\nValvatida is the order to which Chondraster elattosis belongs.<SEP>Valvatida is the order to which Spoladaster veneris belongs.<SEP>Valvatida is the order to which Poraniopsis echinaster belongs.\nSpoladaster Veneris -> Valvatida: Spoladaster veneris belongs to the order Valvatida.\nTaxonomic classification of Chondraster elattosis (Pentagon star) (table) -> Valvatida: Entity Valvatida belongs to Taxonomic classification of Chondraster elattosis (Pentagon star) (table)\nSpoladaster veneris taxonomic classification table (table) -> Valvatida: Entity Valvatida belongs to Spoladaster veneris taxonomic classification table (table)\nAsteroidea -> Valvatida: Asteroidea is the class that includes the order Valvatida.",
+      "score": 0.007692307692307693,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "relations": [
+          {
+            "source": "Spoladaster Veneris",
+            "target": "Valvatida",
+            "weight": "1.0",
+            "description": "Spoladaster veneris belongs to the order Valvatida.",
+            "keywords": "order,taxonomic classification",
+            "source_id": "chunk-1ff0eb99ae21e17d67fdd1dbba08d515",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097605",
+            "truncate": ""
+          },
+          {
+            "source": "Taxonomic classification of Chondraster elattosis (Pentagon star) (table)",
+            "target": "Valvatida",
+            "weight": "10.0",
+            "description": "Entity Valvatida belongs to Taxonomic classification of Chondraster elattosis (Pentagon star) (table)",
+            "keywords": "belongs_to,contained_in,part_of",
+            "source_id": "chunk-c2277bdb0cfb9e13e612107b546b5702",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097637",
+            "truncate": ""
+          },
+          {
+            "source": "Spoladaster veneris taxonomic classification table (table)",
+            "target": "Valvatida",
+            "weight": "10.0",
+            "description": "Entity Valvatida belongs to Spoladaster veneris taxonomic classification table (table)",
+            "keywords": "belongs_to,contained_in,part_of",
+            "source_id": "chunk-1ff0eb99ae21e17d67fdd1dbba08d515",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097612",
+            "truncate": ""
+          },
+          {
+            "source": "Asteroidea",
+            "target": "Valvatida",
+            "weight": "1.0",
+            "description": "Asteroidea is the class that includes the order Valvatida.",
+            "keywords": "class to order,taxonomic hierarchy",
+            "source_id": "chunk-1ff0eb99ae21e17d67fdd1dbba08d515",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097609",
+            "truncate": ""
+          },
+          {
+            "source": "Valvatida",
+            "target": "Chondraster elattosis",
+            "weight": "1.0",
+            "description": "Chondraster elattosis is classified under the order Valvatida.",
+            "keywords": "order,taxonomy",
+            "source_id": "chunk-c2277bdb0cfb9e13e612107b546b5702",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097631",
+            "truncate": ""
+          }
+        ],
+        "fused_sources": [
+          "graph"
+        ],
+        "doc_id": "",
+        "page": null,
+        "doc_title": "F:\\rag\\AquaBio-AgentRAG\\data\\mrag\\raganything\\working\\graph_chunk_entity_relation.graphml",
+        "source_type": "lightrag_graph",
+        "modality": "mixed",
+        "entity_names": [
+          "Asteroidea",
+          "Valvatida"
+        ],
+        "relation_path": [
+          "Spoladaster Veneris",
+          "Spoladaster veneris belongs to the order Valvatida.",
+          "Valvatida"
+        ],
+        "retrieval_source": "lightrag_graph"
+      }
+    },
+    {
+      "evidence_id": "E6",
+      "id": "graph_neighbor_6_Asteroidea",
+      "source_system": "lightrag_graph",
+      "source_type": "lightrag_graph",
+      "title": "F:\\rag\\AquaBio-AgentRAG\\data\\mrag\\raganything\\working\\graph_chunk_entity_relation.graphml",
+      "content": "Graph entity: Asteroidea\nClass to which Luidia sarsii africana belongs.<SEP>Asteroidea is the class to which Chondraster elattosis belongs.<SEP>Asteroidea is the class (starfish) to which Spoladaster veneris belongs.\nEchinodermata -> Asteroidea: Echinodermata is the phylum that includes the class Asteroidea.\nSpoladaster Veneris -> Asteroidea: Spoladaster veneris belongs to the class Asteroidea.\nLuidia sarsii africana taxonomic classification table (table) -> Asteroidea: Entity Asteroidea belongs to Luidia sarsii africana taxonomic classification table (table)\nTaxonomic classification of Chondraster elattosis (Pentagon star) (table) -> Asteroidea: Entity Asteroidea belongs to Taxonomic classification of Chondraster elattosis (Pentagon star) (table)",
+      "score": 0.007575757575757576,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "relations": [
+          {
+            "source": "Echinodermata",
+            "target": "Asteroidea",
+            "weight": "1.0",
+            "description": "Echinodermata is the phylum that includes the class Asteroidea.",
+            "keywords": "phylum to class,taxonomic hierarchy",
+            "source_id": "chunk-1ff0eb99ae21e17d67fdd1dbba08d515",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097609",
+            "truncate": ""
+          },
+          {
+            "source": "Spoladaster Veneris",
+            "target": "Asteroidea",
+            "weight": "1.0",
+            "description": "Spoladaster veneris belongs to the class Asteroidea.",
+            "keywords": "class,taxonomic classification",
+            "source_id": "chunk-1ff0eb99ae21e17d67fdd1dbba08d515",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097605",
+            "truncate": ""
+          },
+          {
+            "source": "Luidia sarsii africana taxonomic classification table (table)",
+            "target": "Asteroidea",
+            "weight": "10.0",
+            "description": "Entity Asteroidea belongs to Luidia sarsii africana taxonomic classification table (table)",
+            "keywords": "belongs_to,contained_in,part_of",
+            "source_id": "chunk-f0f7451703f2287af83a619489c9a745",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097534",
+            "truncate": ""
+          },
+          {
+            "source": "Taxonomic classification of Chondraster elattosis (Pentagon star) (table)",
+            "target": "Asteroidea",
+            "weight": "10.0",
+            "description": "Entity Asteroidea belongs to Taxonomic classification of Chondraster elattosis (Pentagon star) (table)",
+            "keywords": "belongs_to,contained_in,part_of",
+            "source_id": "chunk-c2277bdb0cfb9e13e612107b546b5702",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097637",
+            "truncate": ""
+          },
+          {
+            "source": "Spoladaster veneris taxonomic classification table (table)",
+            "target": "Asteroidea",
+            "weight": "10.0",
+            "description": "Entity Asteroidea belongs to Spoladaster veneris taxonomic classification table (table)",
+            "keywords": "belongs_to,contained_in,part_of",
+            "source_id": "chunk-1ff0eb99ae21e17d67fdd1dbba08d515",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097612",
+            "truncate": ""
+          },
+          {
+            "source": "Luidia Sarsii Africana",
+            "target": "Asteroidea",
+            "weight": "1.0",
+            "description": "Luidia sarsii africana is classified under the class Asteroidea.",
+            "keywords": "classification,taxonomic hierarchy",
+            "source_id": "chunk-f0f7451703f2287af83a619489c9a745",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097529",
+            "truncate": ""
+          },
+          {
+            "source": "Asteroidea",
+            "target": "Valvatida",
+            "weight": "1.0",
+            "description": "Asteroidea is the class that includes the order Valvatida.",
+            "keywords": "class to order,taxonomic hierarchy",
+            "source_id": "chunk-1ff0eb99ae21e17d67fdd1dbba08d515",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097609",
+            "truncate": ""
+          },
+          {
+            "source": "Asteroidea",
+            "target": "Chondraster elattosis",
+            "weight": "1.0",
+            "description": "Chondraster elattosis is classified under the class Asteroidea.",
+            "keywords": "class,taxonomy",
+            "source_id": "chunk-c2277bdb0cfb9e13e612107b546b5702",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097630",
+            "truncate": ""
+          }
+        ],
+        "fused_sources": [
+          "graph"
+        ],
+        "doc_id": "",
+        "page": null,
+        "doc_title": "F:\\rag\\AquaBio-AgentRAG\\data\\mrag\\raganything\\working\\graph_chunk_entity_relation.graphml",
+        "source_type": "lightrag_graph",
+        "modality": "mixed",
+        "entity_names": [
+          "Asteroidea",
+          "Asteroidea"
+        ],
+        "relation_path": [
+          "Echinodermata",
+          "Echinodermata is the phylum that includes the class Asteroidea.",
+          "Asteroidea"
+        ],
+        "retrieval_source": "lightrag_graph"
+      }
+    },
+    {
+      "evidence_id": "E7",
+      "id": "graph_neighbor_7_Luidia sarsii africana taxonomic classification table (table)",
+      "source_system": "lightrag_graph",
+      "source_type": "lightrag_graph",
+      "title": "F:\\rag\\AquaBio-AgentRAG\\data\\mrag\\raganything\\working\\graph_chunk_entity_relation.graphml",
+      "content": "Graph entity: Luidia sarsii africana taxonomic classification table (table)\nThis table provides the full taxonomic hierarchy for Luidia sarsii africana (Legs break easily starfish), from Phylum Echinodermata through Class Asteroidea, Order Paxillosida, Family Luidiidae, Genus Luidia, to Species sarsii africana. Its common name directly reflects the species' fragile arms as described in the surrounding text. The classification supports identification and contextualizes the species within the guide to South African offshore marine invertebrates.\nEchinodermata -> Luidia sarsii africana taxonomic classification table (table): Entity Echinodermata belongs to Luidia sarsii africana taxonomic classification table (table)\nLuidia sarsii africana taxonomic classification table (table) -> Luidia Sarsii Africana: Entity Luidia Sarsii Africana belongs to Luidia sarsii africana taxonomic classification table (table)\nLuidia sarsii africana taxonomic classification table (table) -> Asteroidea: Entity Asteroidea belongs to Luidia sarsii africana taxonomic classification table (table)",
+      "score": 0.007462686567164179,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "relations": [
+          {
+            "source": "Echinodermata",
+            "target": "Luidia sarsii africana taxonomic classification table (table)",
+            "weight": "10.0",
+            "description": "Entity Echinodermata belongs to Luidia sarsii africana taxonomic classification table (table)",
+            "keywords": "belongs_to,contained_in,part_of",
+            "source_id": "chunk-f0f7451703f2287af83a619489c9a745",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097533",
+            "truncate": ""
+          },
+          {
+            "source": "Luidia sarsii africana taxonomic classification table (table)",
+            "target": "Luidia Sarsii Africana",
+            "weight": "10.0",
+            "description": "Entity Luidia Sarsii Africana belongs to Luidia sarsii africana taxonomic classification table (table)",
+            "keywords": "belongs_to,contained_in,part_of",
+            "source_id": "chunk-f0f7451703f2287af83a619489c9a745",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097533",
+            "truncate": ""
+          },
+          {
+            "source": "Luidia sarsii africana taxonomic classification table (table)",
+            "target": "Asteroidea",
+            "weight": "10.0",
+            "description": "Entity Asteroidea belongs to Luidia sarsii africana taxonomic classification table (table)",
+            "keywords": "belongs_to,contained_in,part_of",
+            "source_id": "chunk-f0f7451703f2287af83a619489c9a745",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097534",
+            "truncate": ""
+          }
+        ],
+        "fused_sources": [
+          "graph"
+        ],
+        "doc_id": "",
+        "page": null,
+        "doc_title": "F:\\rag\\AquaBio-AgentRAG\\data\\mrag\\raganything\\working\\graph_chunk_entity_relation.graphml",
+        "source_type": "lightrag_graph",
+        "modality": "mixed",
+        "entity_names": [
+          "Asteroidea",
+          "Luidia sarsii africana taxonomic classification table (table)"
+        ],
+        "relation_path": [
+          "Echinodermata",
+          "Entity Echinodermata belongs to Luidia sarsii africana taxonomic classification table (table)",
+          "Luidia sarsii africana taxonomic classification table (table)"
+        ],
+        "retrieval_source": "lightrag_graph"
+      }
+    },
+    {
+      "evidence_id": "E8",
+      "id": "graph_neighbor_8_Chondraster elattosis",
+      "source_system": "lightrag_graph",
+      "source_type": "lightrag_graph",
+      "title": "F:\\rag\\AquaBio-AgentRAG\\data\\mrag\\raganything\\working\\graph_chunk_entity_relation.graphml",
+      "content": "Graph entity: Chondraster elattosis\nChondraster elattosis is a starfish species known as Pentagon star, belonging to the family Poraniidae, with pentagonal body shape, cushion-like body, bright pink to orange aboral color, size up to 230 mm diameter, endemic to South Africa's West and South Coasts at depths 400 to 1000+ m.\nEchinodermata -> Chondraster elattosis: Chondraster elattosis is classified under the phylum Echinodermata.\nTaxonomic classification of Chondraster elattosis (Pentagon star) (table) -> Chondraster elattosis: Entity Chondraster elattosis belongs to Taxonomic classification of Chondraster elattosis (Pentagon star) (table)\nAsteroidea -> Chondraster elattosis: Chondraster elattosis is classified under the class Asteroidea.\nValvatida -> Chondraster elattosis: Chondraster elattosis is classified under the order Valvatida.",
+      "score": 0.007352941176470588,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "relations": [
+          {
+            "source": "Echinodermata",
+            "target": "Chondraster elattosis",
+            "weight": "1.0",
+            "description": "Chondraster elattosis is classified under the phylum Echinodermata.",
+            "keywords": "phylum,taxonomy",
+            "source_id": "chunk-c2277bdb0cfb9e13e612107b546b5702",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097630",
+            "truncate": ""
+          },
+          {
+            "source": "Taxonomic classification of Chondraster elattosis (Pentagon star) (table)",
+            "target": "Chondraster elattosis",
+            "weight": "10.0",
+            "description": "Entity Chondraster elattosis belongs to Taxonomic classification of Chondraster elattosis (Pentagon star) (table)",
+            "keywords": "belongs_to,contained_in,part_of",
+            "source_id": "chunk-c2277bdb0cfb9e13e612107b546b5702",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097636",
+            "truncate": ""
+          },
+          {
+            "source": "Asteroidea",
+            "target": "Chondraster elattosis",
+            "weight": "1.0",
+            "description": "Chondraster elattosis is classified under the class Asteroidea.",
+            "keywords": "class,taxonomy",
+            "source_id": "chunk-c2277bdb0cfb9e13e612107b546b5702",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097630",
+            "truncate": ""
+          },
+          {
+            "source": "Valvatida",
+            "target": "Chondraster elattosis",
+            "weight": "1.0",
+            "description": "Chondraster elattosis is classified under the order Valvatida.",
+            "keywords": "order,taxonomy",
+            "source_id": "chunk-c2277bdb0cfb9e13e612107b546b5702",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097631",
+            "truncate": ""
+          }
+        ],
+        "fused_sources": [
+          "graph"
+        ],
+        "doc_id": "",
+        "page": null,
+        "doc_title": "F:\\rag\\AquaBio-AgentRAG\\data\\mrag\\raganything\\working\\graph_chunk_entity_relation.graphml",
+        "source_type": "lightrag_graph",
+        "modality": "mixed",
+        "entity_names": [
+          "Asteroidea",
+          "Chondraster elattosis"
+        ],
+        "relation_path": [
+          "Echinodermata",
+          "Chondraster elattosis is classified under the phylum Echinodermata.",
+          "Chondraster elattosis"
+        ],
+        "retrieval_source": "lightrag_graph"
+      }
+    },
+    {
+      "evidence_id": "E9",
+      "id": "graph_neighbor_9_Luidia Sarsii Africana",
+      "source_system": "lightrag_graph",
+      "source_type": "lightrag_graph",
+      "title": "F:\\rag\\AquaBio-AgentRAG\\data\\mrag\\raganything\\working\\graph_chunk_entity_relation.graphml",
+      "content": "Graph entity: Luidia Sarsii Africana\nA subspecies or variety of starfish in the family Luidiidae, known by the common name \"Legs break easily starfish\" and characterized by arms that break off easily from the central disc.\nEchinodermata -> Luidia Sarsii Africana: Luidia sarsii africana is classified under the phylum Echinodermata.\nLuidia sarsii africana taxonomic classification table (table) -> Luidia Sarsii Africana: Entity Luidia Sarsii Africana belongs to Luidia sarsii africana taxonomic classification table (table)\nLuidia Sarsii Africana -> Asteroidea: Luidia sarsii africana is classified under the class Asteroidea.",
+      "score": 0.007246376811594203,
+      "page": null,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "relations": [
+          {
+            "source": "Echinodermata",
+            "target": "Luidia Sarsii Africana",
+            "weight": "1.0",
+            "description": "Luidia sarsii africana is classified under the phylum Echinodermata.",
+            "keywords": "classification,taxonomic hierarchy",
+            "source_id": "chunk-f0f7451703f2287af83a619489c9a745",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097528",
+            "truncate": ""
+          },
+          {
+            "source": "Luidia sarsii africana taxonomic classification table (table)",
+            "target": "Luidia Sarsii Africana",
+            "weight": "10.0",
+            "description": "Entity Luidia Sarsii Africana belongs to Luidia sarsii africana taxonomic classification table (table)",
+            "keywords": "belongs_to,contained_in,part_of",
+            "source_id": "chunk-f0f7451703f2287af83a619489c9a745",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097533",
+            "truncate": ""
+          },
+          {
+            "source": "Luidia Sarsii Africana",
+            "target": "Asteroidea",
+            "weight": "1.0",
+            "description": "Luidia sarsii africana is classified under the class Asteroidea.",
+            "keywords": "classification,taxonomic hierarchy",
+            "source_id": "chunk-f0f7451703f2287af83a619489c9a745",
+            "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+            "created_at": "1781097529",
+            "truncate": ""
+          }
+        ],
+        "fused_sources": [
+          "graph"
+        ],
+        "doc_id": "",
+        "page": null,
+        "doc_title": "F:\\rag\\AquaBio-AgentRAG\\data\\mrag\\raganything\\working\\graph_chunk_entity_relation.graphml",
+        "source_type": "lightrag_graph",
+        "modality": "mixed",
+        "entity_names": [
+          "Asteroidea",
+          "Luidia Sarsii Africana"
+        ],
+        "relation_path": [
+          "Echinodermata",
+          "Luidia sarsii africana is classified under the phylum Echinodermata.",
+          "Luidia Sarsii Africana"
+        ],
+        "retrieval_source": "lightrag_graph"
+      }
+    },
+    {
+      "evidence_id": "E10",
+      "id": "sa_taxon_adeon_p0242_size",
+      "source_system": "book_bm25",
+      "source_type": "pdf_chunk",
+      "title": "Adeonella spp.",
+      "content": "Colonies may be anything from 50-200 mm in length.",
+      "score": 0.0024590163934426227,
+      "page": 242,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "doc_id": "doc_sa_invertebrates_p0242",
+        "unit_id": "sa_taxon_adeon_p0242",
+        "source_file": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+        "page": 242,
+        "printed_page": 239,
+        "title": "Adeonella spp.",
+        "scientific_name": "Adeonella spp.",
+        "common_name": "Sabre bryozoan",
+        "fb_code": "Adeon",
+        "phylum": "Bryozoa",
+        "modality": "text",
+        "chunk_id": "sa_taxon_adeon_p0242_size",
+        "chunk_type": "size",
+        "content": "Colonies may be anything from 50-200 mm in length.",
+        "fused_sources": [
+          "bm25"
+        ],
+        "doc_title": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+        "source_type": "pdf_chunk",
+        "entity_names": [],
+        "relation_path": [],
+        "retrieval_source": "book_bm25"
+      }
+    }
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "node": "session_init",
+      "event": "completed",
+      "detail": "verify_native_react_unicode"
+    },
+    {
+      "step": 2,
+      "node": "memory_load",
+      "event": "completed",
+      "detail": "0"
+    },
+    {
+      "step": 3,
+      "node": "followup_resolver",
+      "event": "completed",
+      "detail": "False:starfish:normal"
+    },
+    {
+      "step": 4,
+      "node": "router",
+      "event": "completed",
+      "detail": "source_trace"
+    },
+    {
+      "step": 5,
+      "node": "query_rewrite",
+      "event": "completed",
+      "detail": "query_rewrite"
+    },
+    {
+      "step": 6,
+      "node": "source_selection",
+      "event": "completed",
+      "detail": "pdf_retriever"
+    },
+    {
+      "step": 7,
+      "node": "react_tool_plan",
+      "event": "completed",
+      "detail": "step=1;mode=native_function_calling;tools=pdf_retriever"
+    },
+    {
+      "step": 8,
+      "node": "retrieval",
+      "event": "completed",
+      "detail": "text=0,web=0,image=0,pair=0,pdf=10,mcp_pdf_images=0,filter_species=starfish,elapsed=1.26s"
+    },
+    {
+      "step": 9,
+      "node": "rerank",
+      "event": "completed",
+      "detail": "weighted:10"
+    },
+    {
+      "step": 10,
+      "node": "context_builder",
+      "event": "completed",
+      "detail": "10"
+    },
+    {
+      "step": 11,
+      "node": "answer_generation",
+      "event": "completed",
+      "detail": "qwen:qwen3.7-plus:51.32s"
+    },
+    {
+      "step": 12,
+      "node": "response_guard",
+      "event": "completed",
+      "detail": "normal"
+    },
+    {
+      "step": 13,
+      "node": "evaluation",
+      "event": "completed",
+      "detail": "True:1.00"
+    },
+    {
+      "step": 14,
+      "node": "finalize",
+      "event": "completed",
+      "detail": "finalize"
+    },
+    {
+      "step": 15,
+      "node": "memory_save",
+      "event": "completed",
+      "detail": "1"
+    },
+    {
+      "step": 16,
+      "node": "api",
+      "event": "completed",
+      "detail": "latency_ms=57470"
+    }
+  ],
+  "warnings": [],
+  "memory": {
+    "last_species_ids": [
+      "starfish"
+    ],
+    "last_species_names": [
+      "海星"
+    ],
+    "last_image_path": "",
+    "last_image_caption": "",
+    "last_answer_summary": "根据 RAG-Anything MCP 的 PDF 知识图谱证据，海星与海胆的外观特征比较如下：\n\n**1. 共同外观特征**\n海星与海胆均属于**棘皮动物门（Echinodermata）** [E4]。作为该门成员，它们共享一些基础的外观与解剖特征，包括：星状/星形身体（stellate body，注：此为门级共性描述）、网状骨骼（reticular skeleton）、突起的刺（raised spines）、管足（tube feet）以及白色的筛板（white madreporite）[E4]。\n\n**2. 海星（Starfish / Asteroidea）的具体外观特征**\n海星纲物种在形态、质感和颜色上表现出丰富的特异性：\n*   **体型与形状**：通常呈星形，部分种类呈现明显的**五角星体型**（pentagonal body shape）和**垫状身体**（cushion-like body）[E1, E8]；也有种类身体呈现**膨胀**状态（inflates）[E2, E3]。\n*   **表面质感与颜色**：体表可能具有**皮革质感**（leathery）[E2, E",
+    "last_evidence_ids": [
+      "graph_neighbor_1_Taxonomic classification of Chondraster elattosis (Pentagon star) (table)",
+      "graph_neighbor_2_Spoladaster veneris taxonomic classification table (table)",
+      "graph_neighbor_3_Spoladaster Veneris",
+      "graph_neighbor_4_Echinodermata",
+      "graph_neighbor_5_Valvatida",
+      "graph_neighbor_6_Asteroidea",
+      "graph_neighbor_7_Luidia sarsii africana taxonomic classification table (table)",
+      "graph_neighbor_8_Chondraster elattosis",
+      "graph_neighbor_9_Luidia Sarsii Africana",
+      "sa_taxon_adeon_p0242_size"
+    ]
+  },
+  "route": {
+    "task_type": "source_trace",
+    "need_vlm": false,
+    "need_text_retrieval": false,
+    "need_image_retrieval": false,
+    "need_multimodal_retrieval": false,
+    "need_pdf_retrieval": true
+  },
+  "model": {
+    "provider": "qwen",
+    "name": "qwen3.7-plus",
+    "called": true,
+    "fallback": false
+  },
+  "pending_review": false,
+  "raw_state": null
+}

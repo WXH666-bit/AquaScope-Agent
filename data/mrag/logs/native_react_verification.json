@@ -1,0 +1,533 @@
+{
+  "session_id": "verify_native_react",
+  "turn_id": "turn_2eb71016eb3e",
+  "answer": "您好！您的查询似乎出现了乱码（显示为多个问号）。根据提供的PDF证据，我为您综合总结了这些PDF文献中涵盖的主要内容、物种及数据集：\n\n**1. 西大西洋海洋生物资源（FAO指南）**\n*   **涵盖类群**：包含了脊椎动物（如**有鳍鱼类 finfish**）和无脊椎动物（invertebrate groups）的详细信息[E2, E3]。\n*   **内容细节**：提供了物种的FAO通用名称、科学名称、诊断特征、生物学与渔业信息、地理分布描述及分布图[E1, E2, E9]。\n\n**2. 珊瑚礁（Coral Reefs）**\n*   **涵盖物种**：**珊瑚（coral）** 及珊瑚礁生态系统[E7]。\n*   **内容细节**：介绍了珊瑚礁的类型、全球分布、生态重要性、面临的威胁以及相关的保护措施[E7]。\n\n**3. 水下图像增强基准数据集（UIEB）**\n*   **数据集内容**：这是一个真实世界的水下图像数据集，包含890张原始水下图像及其对应的高质量参考图像，以及60张具有挑战性的水下图像[E5, E8]。\n*   **应用场景**：主要用于定性和定量评估各种水下图像增强算法（如基于融合、Retinex、物理模型等方法），也可用于深度模型的训练[E5, E8, E10, E12]。\n\n**4. 水下目标检测数据集（DUO）**\n*   **涵盖物种**：专门针对水下生物的目标检测数据集，包含的具体物种有**海参（Holothurian）**、**海胆（echinus）**、**扇贝（scallop）**和**海星（starfish）**[E11]。\n*   **数据集规模**：包含7,782张图像（6,671张用于训练，1,111张用于测试），总目标实例数为74,515个，其中海胆占比最高（67.3%）[E11]。\n\n如果您有具体想了解的物种、数据集或PDF中的特定问题，请重新输入您的查询，我将为您提供更准确的解答！",
+  "answer_type": "text",
+  "images": [],
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "id": "pdf_fao_wca_volume1_p0006_c004",
+      "source_system": "chroma",
+      "source_type": "pdf_chunk",
+      "title": "The Living Marine Resources of the Western Central Atlantic, Volume 1",
+      "content": "a map showing a generalized area of coverage. For\nless important species, abbreviated accounts are used. This includes the species name, FAO common name\nor names, notes on biology and distribution, an illustration, and a generalized distribution map. Families which\nare monotypic or contain a single species in the area are covered similar to important species except that frequently 2 sides of a page are used and notes on similar species occurring in the area are included. Families\nthat are less important have a family section similar to those for important families except a key to species may\nor may not be included, and no detailed species pages follow. For finfish, the maximum size and a brief distribution description are included for those species in a list of species not additionally covered in a species account.\nv",
+      "score": 0.005737704918032787,
+      "page": 6,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "species_id": "",
+        "doc_title": "The Living Marine Resources of the Western Central Atlantic, Volume 1",
+        "modality": "pdf_text",
+        "section": "",
+        "source_url": "https://www.fao.org/4/y4160e/y4160e00.pdf",
+        "source_type": "pdf_chunk",
+        "doc_type": "species_identification_guide",
+        "source_org": "FAO",
+        "chunk_type": "document_text",
+        "page": 6,
+        "doc_id": "pdf_fao_wca_volume1",
+        "related_species": "[]",
+        "fused_sources": [
+          "chroma"
+        ],
+        "entity_names": [],
+        "relation_path": [],
+        "retrieval_source": "chroma"
+      }
+    },
+    {
+      "evidence_id": "E2",
+      "id": "pdf_fao_wca_volume1_p0006_c003",
+      "source_system": "chroma",
+      "source_type": "pdf_chunk",
+      "title": "The Living Marine Resources of the Western Central Atlantic, Volume 1",
+      "content": "l change with time,\nand whether an organism has potential for exploitation. In addition, exploitation must be carefully weighed\nagainst ecological impacts in order to ensure sustainability. Included in this consideration is the issue of\nbiodiversity. Ideally, this document would include a comprehensive list of all species in the groups covered so\nthat it can also be used as a benchmark for biodiversity. However, for many of the invertebrate groups which\nare very speciose, the work required to compile species lists is beyond the scope of this work. However, for the\nvertebrate groups, comprehensive species lists were possible and are included here.\nThe families most important in fisheries are covered with a family section summarizing family diagnostic characters, biological and fisheries information, notes on similar families occurring in the area, a key to species, a\nlist of species, and a short list of relevant literature. However, for certain groups, family accounts are omitted\nand extensive information is included only under the species accounts. Species in the important families have\na single side of a page to include the species name, frequently encountered synonyms (or combinations) and\nmisidentifications, the FAO common name or names, an illustration, diagnostic characters, biology and fisheries information, notes on geographical distribution, and a map showing a generalized area of coverage. For\nless important species, abbreviated accounts are used. This includes the species name, FAO common name\nor names, notes on biology and distribution, an illustration, and a generalized distribution map.",
+      "score": 0.00564516129032258,
+      "page": 6,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "chunk_type": "document_text",
+        "species_id": "",
+        "section": "",
+        "page": 6,
+        "doc_title": "The Living Marine Resources of the Western Central Atlantic, Volume 1",
+        "doc_type": "species_identification_guide",
+        "source_org": "FAO",
+        "doc_id": "pdf_fao_wca_volume1",
+        "related_species": "[]",
+        "modality": "pdf_text",
+        "source_url": "https://www.fao.org/4/y4160e/y4160e00.pdf",
+        "source_type": "pdf_chunk",
+        "fused_sources": [
+          "chroma"
+        ],
+        "entity_names": [],
+        "relation_path": [],
+        "retrieval_source": "chroma"
+      }
+    },
+    {
+      "evidence_id": "E3",
+      "id": "pdf_fao_wca_volume1_p0006_c002",
+      "source_system": "chroma",
+      "source_type": "pdf_chunk",
+      "title": "The Living Marine Resources of the Western Central Atlantic, Volume 1",
+      "content": "ipt for the sixth edition planned for publication in 2003, is listed in parentheses after the FAO common name. To simplify, small differences between\nthe English names, such as a space or hypen between compound words, or an ‘ed’ ending are not noted. No\nattempt was made to note differences between official Spanish FAO and AFS/ASIH names since this part of\nthe AFS/ASIH list is not yet complete.\nFinfish scientific names and Eschmeyer’s Catalog of Fishes\nW.N. Eschmeyer has tirelessly researched the scientific names of finfishes and his species and genera database is found in the California Academy of Sciences publication, the Catalog of Fishes, which is also available\nonline. The spelling and citation of all scientific names follows this database unless an author specifically disagreed with a listing.\nThe FAO Codes Currently Included in the Identification Guide Series\nThe 3 letter code listed to the right of certain species names are alpha identifiers used by agencies to report\ncatches and landings to the FAO. Those species with these 3 alpha codes are those species currently in the\nFAO database as a statistical taxonomic unit.\nDifferent Levels of Taxonomic Coverage\nIn addition to the great diversity of species covered in this guide, there is also a wide diversity in the extent and\nmethods of fisheries utilization. We attempt to give more extensive coverage to those species that are more\nimportant in fisheries. However, it is also often difficult to judge how fisheries importance will change with time,\nand whether an organism has potential for exploitation. In addition, exploitation must be carefully weighed\nagainst ecological impacts in order to ensure sustainability. Included in this consideration is the issue of\nbiodiversity.",
+      "score": 0.005555555555555555,
+      "page": 6,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "doc_id": "pdf_fao_wca_volume1",
+        "doc_title": "The Living Marine Resources of the Western Central Atlantic, Volume 1",
+        "source_org": "FAO",
+        "modality": "pdf_text",
+        "species_id": "",
+        "related_species": "[]",
+        "page": 6,
+        "source_type": "pdf_chunk",
+        "chunk_type": "document_text",
+        "source_url": "https://www.fao.org/4/y4160e/y4160e00.pdf",
+        "section": "",
+        "doc_type": "species_identification_guide",
+        "fused_sources": [
+          "chroma"
+        ],
+        "entity_names": [],
+        "relation_path": [],
+        "retrieval_source": "chroma"
+      }
+    },
+    {
+      "evidence_id": "E4",
+      "id": "pdf_fao_wca_volume1_p0003_c001",
+      "source_system": "chroma",
+      "source_type": "pdf_chunk",
+      "title": "The Living Marine Resources of the Western Central Atlantic, Volume 1",
+      "content": "The designations employed and the presentation of material in this\ninformation product do not imply the expression of any opinion\nwhatsoever on the part of the Food and Agriculture Organization\nof the United Nations concerning the legal status of any country,\nterritory, city or area or of its authorities, or concerning the\ndelimitation of its frontiers or boundaries.\nAll rights reserved. Reproduction and dissemination of material in this\ninformation product for educational or other non-commercial purposes are\nauthorized without any prior written permission from the copyright holders\nprovided the source is fully acknowledged. Reproduction of material in this\ninformation product for resale or other commercial purposes is prohibited without\nwritten permission of the copyright holders. Applications for such permission\nshould be addressed to the Chief, Publishing Management Service, Information\nDivision, FAO, Viale delle Terme di Caracalla, 00100 Rome, Italy or by e-mail\nto copyright@fao.org\n© FAO 2002\nISBN 92-5-104825-8",
+      "score": 0.00546875,
+      "page": 3,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "source_type": "pdf_chunk",
+        "doc_title": "The Living Marine Resources of the Western Central Atlantic, Volume 1",
+        "related_species": "[]",
+        "doc_id": "pdf_fao_wca_volume1",
+        "page": 3,
+        "modality": "pdf_text",
+        "source_org": "FAO",
+        "section": "The designations employed and the presentation of material in this",
+        "doc_type": "species_identification_guide",
+        "chunk_type": "document_text",
+        "species_id": "",
+        "source_url": "https://www.fao.org/4/y4160e/y4160e00.pdf",
+        "fused_sources": [
+          "chroma"
+        ],
+        "entity_names": [],
+        "relation_path": [],
+        "retrieval_source": "chroma"
+      }
+    },
+    {
+      "evidence_id": "E5",
+      "id": "pdf_uieb_research_p0005_c002",
+      "source_system": "chroma",
+      "source_type": "pdf_chunk",
+      "title": "An Underwater Image Enhancement Benchmark Dataset and Beyond",
+      "content": "d the result winning the pairwise comparisons\nwill be compared again in the next round, until the best one is\nselected. There is no time constraint for volunteers and zoomin operation is allowed. An example of pairwise comparisons\nis shown in Fig. 4. For each pair of enhanced results, taking the\nraw underwater image as a reference, a volunteer ﬁrst needs\nto independently decide which one is better than the other.\nFor each volunteer, the best result will be selected after 11\npairwise comparisons.\nAdditionally, the volunteer needs to inspect the best result\nagain and then label the best result as being satisfactory or dissatisfactory. The reference image for a raw underwater image\nis ﬁrst selected by majority voting after pairwise comparisons.\nTABLE I\nPERCENTAGE OF THE REFERENCE IMAGES FROM THE RESULTS OF\nDIFFERENT METHODS.\nMethod\nPercentage (%)\nfusion-based [31]\n24.72\ntwo-step-based [32]\n7.30\nretinex-based [33]\n0.22\nDCP [35]\n2.58\nUDCP [37]\n0.00\nregression-based [39]\n1.80\nGDCP [40]\n0.34\nRed Channel [42]\n0.90\nhistogram prior [45]\n13.37\nblurriness-based [46]\n3.48\nMSCNN [66]\n0.90\ndive+\n43.93\nAfter that, if the selected reference image has greater than half\nthe number of votes labeled dissatisfaction, its corresponding\nraw underwater image is treated as a challenging image and\nthe reference image is discarded. We totally achieve 890\navailable reference images which have higher quality than\nany individual methods and a challenging set including 60\nunderwater images. To visualize the process of reference\nimage generation, we present some cases that the results of\nsome methods are shown and indicate which one is the ﬁnal\nreference image in Fig. 5. Furthermore, the percentage of\nthe reference images from the results of different methods is\npresented in Table I.",
+      "score": 0.005384615384615384,
+      "page": 5,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "source_org": "IEEE authors / arXiv",
+        "doc_type": "research_paper",
+        "related_species": "[]",
+        "source_type": "pdf_chunk",
+        "chunk_type": "document_text",
+        "source_url": "https://arxiv.org/pdf/1901.05495",
+        "page": 5,
+        "species_id": "",
+        "section": "IEEE TRANSACTIONS ON IMAGE PROCESSING",
+        "doc_id": "pdf_uieb_research",
+        "doc_title": "An Underwater Image Enhancement Benchmark Dataset and Beyond",
+        "modality": "pdf_text",
+        "fused_sources": [
+          "chroma"
+        ],
+        "entity_names": [],
+        "relation_path": [],
+        "retrieval_source": "chroma"
+      }
+    },
+    {
+      "evidence_id": "E6",
+      "id": "pdf_uieb_research_p0004_c004",
+      "source_system": "chroma",
+      "source_type": "pdf_chunk",
+      "title": "An Underwater Image Enhancement Benchmark Dataset and Beyond",
+      "content": "l application for enhancing underwater images (i.e.,\ndive+8). We exclude the recent deep learning-based methods\ndue to their limited generalization capability to the diverse\nreal-world underwater images and the ﬁxed size of network\noutput [53], [55]. The source codes of all the employed methods except the fusion-based [31] are provided by their authors.\n8https://itunes.apple.com/us/app/dive-video-color-correction/\nid1251506403?mt=8",
+      "score": 0.0053030303030303025,
+      "page": 4,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "source_org": "IEEE authors / arXiv",
+        "doc_id": "pdf_uieb_research",
+        "doc_type": "research_paper",
+        "doc_title": "An Underwater Image Enhancement Benchmark Dataset and Beyond",
+        "modality": "pdf_text",
+        "page": 4,
+        "section": "IEEE TRANSACTIONS ON IMAGE PROCESSING",
+        "species_id": "",
+        "chunk_type": "document_text",
+        "related_species": "[]",
+        "source_url": "https://arxiv.org/pdf/1901.05495",
+        "source_type": "pdf_chunk",
+        "fused_sources": [
+          "chroma"
+        ],
+        "entity_names": [],
+        "relation_path": [],
+        "retrieval_source": "chroma"
+      }
+    },
+    {
+      "evidence_id": "E7",
+      "id": "pdf_iucn_coral_reefs_p0005_c001",
+      "source_system": "chroma",
+      "source_type": "pdf_chunk",
+      "title": "Coral Reefs",
+      "content": "Contents\nWhat are corals/types of coral? \n1\nWhat are coral reefs? \n5\nWhere are coral reefs found in the world? \n7\nWhat is the importance of coral reefs? \n7\nWhat are the threats to coral reefs? \n12\nAt a glance: services provided by and threats to coral reefs \n25\nWhat is being done to conserve coral reefs? \n28\nReferences \n32\nAcknowledgments \n35\nPhotocredits \n36\niii",
+      "score": 0.005223880597014925,
+      "page": 5,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "page": 5,
+        "doc_id": "pdf_iucn_coral_reefs",
+        "source_url": "https://portals.iucn.org/library/sites/library/files/documents/CES-001.pdf",
+        "doc_type": "conservation_report",
+        "species_id": "coral",
+        "related_species": "[\"coral\"]",
+        "source_type": "pdf_chunk",
+        "modality": "pdf_text",
+        "section": "Contents",
+        "chunk_type": "ecology_context",
+        "source_org": "IUCN",
+        "doc_title": "Coral Reefs",
+        "fused_sources": [
+          "chroma"
+        ],
+        "entity_names": [],
+        "relation_path": [],
+        "retrieval_source": "chroma"
+      }
+    },
+    {
+      "evidence_id": "E8",
+      "id": "pdf_uieb_research_p0005_c003",
+      "source_system": "chroma",
+      "source_type": "pdf_chunk",
+      "title": "An Underwater Image Enhancement Benchmark Dataset and Beyond",
+      "content": "eration, we present some cases that the results of\nsome methods are shown and indicate which one is the ﬁnal\nreference image in Fig. 5. Furthermore, the percentage of\nthe reference images from the results of different methods is\npresented in Table I. In this paper, we highlight the top one\nperformance in red, whereas the second top one is in blue.\nIn summary, the results with improved contrast and genuine\ncolor are most favored by observers while the over-/underenhancement, artifacts, and color casts lead to visually unpleasing results. Finally, the constructed UIEB includes two\nsubsets: 890 raw underwater images with the corresponding\nhigh-quality reference images; 60 challenging underwater images. To the best of our knowledge, it is the ﬁrst real-world\nunderwater image dataset with reference images so far. The\nUIEB has various potential applications, such as performance\nevaluation and CNNs training. Next, we will introduce these\ntwo applications.\nIV. EVALUATION AND DISCUSSION\nA comprehensive and fair evaluation of underwater image\nenhancement methods has long been missing from the literatures. Using the constructed UIEB, we evaluate the state-ofthe-art underwater image enhancement methods (i.e., fusionbased [31], two-step-based [32], retinex-based [33], UDCP\n[37], regression-based [39], GDCP [40], Red Channel [42],\nhistogram prior [45], blurriness-based [46]) both qualitatively\nand quantitatively.\nA. Qualitative Evaluation\nWe ﬁrst select several underwater images from the UIEB,\nand then divide these images into ﬁve categories: greenish and\nbluish images, downward looking images, forward looking images, low backscatter scenes, and high backscatter scenes. The\nresults of different methods and the corresponding reference",
+      "score": 0.005147058823529412,
+      "page": 5,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "page": 5,
+        "related_species": "[]",
+        "doc_title": "An Underwater Image Enhancement Benchmark Dataset and Beyond",
+        "source_url": "https://arxiv.org/pdf/1901.05495",
+        "chunk_type": "document_text",
+        "species_id": "",
+        "source_org": "IEEE authors / arXiv",
+        "source_type": "pdf_chunk",
+        "doc_id": "pdf_uieb_research",
+        "doc_type": "research_paper",
+        "modality": "pdf_text",
+        "section": "IEEE TRANSACTIONS ON IMAGE PROCESSING",
+        "fused_sources": [
+          "chroma"
+        ],
+        "entity_names": [],
+        "relation_path": [],
+        "retrieval_source": "chroma"
+      }
+    },
+    {
+      "evidence_id": "E9",
+      "id": "pdf_fao_wca_volume1_p0006_c001",
+      "source_system": "chroma",
+      "source_type": "pdf_chunk",
+      "title": "The Living Marine Resources of the Western Central Atlantic, Volume 1",
+      "content": "the entire biodiversity of the ichthyofauna. In addition, the 1978 edition is out of print and the current update is\nintended to make this body of information more readily available in the region.\nA stimulus for this revision originated with the need to improve the information in the FishBase database (managed by Rainer Froese). This led to support for the workshop that was held in Belize City, Belize in July 1999\nspecifically for the purpose of improving the information in the finfish sections of the guide. The emphasis on\nfinfish later resulted in additional project support that originated in the Special Publication Committee of the\nAmerican Society of Ichthyology and Herpetology. Conservation International agreed to produce the distribution maps into a publishable figure and into a geographical information system through their Center for Applied Biodiversity Science. This served as the basis for part of the biogeographical information included in the\nintroductory chapter to these volumes.\nFAO and AFS/ASIH Common Names\nSome official common names for finfishes differ between the FAO and those of the joint committee of the\nAmerican Fisheries Society (AFS) and American Society of Ichthyologists and Herpetologists (ASIH). In order\nto allow cross reference between these two widely used systems, whenever the English common name differs\nsubstantially, the AFS/ASIH English common name, as in the manuscript for the sixth edition planned for publication in 2003, is listed in parentheses after the FAO common name. To simplify, small differences between\nthe English names, such as a space or hypen between compound words, or an ‘ed’ ending are not noted.",
+      "score": 0.005072463768115942,
+      "page": 6,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "related_species": "[]",
+        "page": 6,
+        "doc_id": "pdf_fao_wca_volume1",
+        "doc_title": "The Living Marine Resources of the Western Central Atlantic, Volume 1",
+        "source_org": "FAO",
+        "doc_type": "species_identification_guide",
+        "chunk_type": "document_text",
+        "source_type": "pdf_chunk",
+        "section": "",
+        "source_url": "https://www.fao.org/4/y4160e/y4160e00.pdf",
+        "species_id": "",
+        "modality": "pdf_text",
+        "fused_sources": [
+          "chroma"
+        ],
+        "entity_names": [],
+        "relation_path": [],
+        "retrieval_source": "chroma"
+      }
+    },
+    {
+      "evidence_id": "E10",
+      "id": "pdf_uieb_research_p0012_c002",
+      "source_system": "chroma",
+      "source_type": "pdf_chunk",
+      "title": "An Underwater Image Enhancement Benchmark Dataset and Beyond",
+      "content": ", we will re-organize the\nselection of the reference images from more reliable results\nand also further train the volunteers on what the degrading\neffects of attenuation and backscatter are, and what it looks\nlike when either is improperly corrected. Additionally, the\nmain purpose of constructing the real-world underwater dataset\nin this paper is to evaluate the state-of-the-art underwater\nimage enhancement methods and provide paired training data\nfor deep models. Since the full-reference metrics and training\na deep model only need a single reference, we do not select\nmultiple references or deﬁne the image quality level. However,\nthe image quality level of multiple reference images does\nhelp in underwater image enhancement. Thus, we will provide\nmultiple reference images for an underwater image and deﬁne\nthe image quality level of their reference images when we\nre-organize the selection of the reference images.\nREFERENCES\n[1] J. Jaffe, “Underwater optical imaging: The past, the present, and the\nprospects,” IEEE J. Oceanic Eng., vol. 40, no. 3, pp. 683-700, 2015. 1\n[2] M. Sheinin and Y. Schechner, “The next best underwater view,” in Proc.\nof IEEE Int. Conf. Comput. Vis. Pattern Rec. (CVPR), 2016, pp. 3764-\n3773. 1\n[3] B. McGlamery, “A computer model for underwater camera systems,” in\nOcean Optics VI, pp. 221-231, 1980. 1\n[4] J. Jaffe, “Computer modeling and the design of optimal underwater\nimaging systems,” IEEE J. Oceanic Eng., vol. 15, no. 2, pp. 101-111,\n1990. 1\n[5] W. Hou, S. Woods, E. Jarosz, et al., “Optical turbulence on underwater\nimage degradation in natural environments,” Appl. Opt., vol. 15, no. 14,\npp. 2678-2686, 2012. 1\n[6] D. Akkaynak and T. Treibitz, “A revised underwater image formation\nmodel,” in Proc. of IEEE Int. Conf. Comput. Vis. Pattern Rec.",
+      "score": 0.005,
+      "page": 12,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "page": 12,
+        "doc_id": "pdf_uieb_research",
+        "doc_type": "research_paper",
+        "source_type": "pdf_chunk",
+        "source_org": "IEEE authors / arXiv",
+        "doc_title": "An Underwater Image Enhancement Benchmark Dataset and Beyond",
+        "modality": "pdf_text",
+        "chunk_type": "document_text",
+        "section": "IEEE TRANSACTIONS ON IMAGE PROCESSING",
+        "related_species": "[]",
+        "source_url": "https://arxiv.org/pdf/1901.05495",
+        "species_id": "",
+        "fused_sources": [
+          "chroma"
+        ],
+        "entity_names": [],
+        "relation_path": [],
+        "retrieval_source": "chroma"
+      }
+    },
+    {
+      "evidence_id": "E11",
+      "id": "pdf_duo_research_p0003_c002",
+      "source_system": "chroma",
+      "source_type": "pdf_chunk",
+      "title": "A Dataset and Benchmark of Underwater Object Detection for Robot Picking",
+      "content": "images (6,671 images for training; 1,111 for testing). The retention rate of the\nnew dataset is 95%, which means that there are only a few\nsimilar images in the new dataset. Figure 1 shows that our\ndataset also retains various underwater scenes.\n3.2. Image Re-annotation\nDue to the small size of objects and the blur underwater environment, there are always missing or wrong labels in the\nexisting annotation ﬁles. In addition, some test sets’ annotation ﬁles are not available and some datasets do not have the\nstarﬁsh annotation. In order to address these issues, we follow\nthe next process which combines a CNN model and manual\nannotation to re-annotate these images. Speciﬁcally, we ﬁrst\ntrain a detector (i.e., GFL [6]) with the originally labeled images. After that, the trained detector predicts all the 7,782\nimages. We treat the prediction as the groundtruth and use it\nto train the GFL again. We get the ﬁnal GFL prediction called\nthe coarse annotation. Next, we use manual correction to get\nthe ﬁnal annotation called the ﬁne annotation. Notably, we\nadopt the COCO [7] annotation form as the ﬁnal format.\n3.3. Dataset Statistics\nThe proportion of classes: The total number of objects is\n74,515. Holothurian, echinus, scallop, and starﬁsh are 7,887,\n50,156, 1,924, and 14,548, respectively.\nFigure 2 shows\nthe proportion of each creatures where echinus accounts for\n67.3% of the total. The whole data distribution shows an obvious long-tail distribution because the different economic beneﬁts of different seafoods determine the different breed quantities.\nThe distribution of instance sizes: Figure 3(a) shows an\ninstance size distribution of DUO.",
+      "score": 0.004929577464788732,
+      "page": 3,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "source_url": "https://arxiv.org/pdf/2106.05681",
+        "species_id": "",
+        "chunk_type": "document_text",
+        "source_org": "Dalian University of Technology / arXiv",
+        "doc_title": "A Dataset and Benchmark of Underwater Object Detection for Robot Picking",
+        "page": 3,
+        "related_species": "[\"scallop\", \"sea_cucumber\", \"sea_urchin\"]",
+        "doc_type": "research_paper",
+        "source_type": "pdf_chunk",
+        "doc_id": "pdf_duo_research",
+        "section": "",
+        "modality": "pdf_text",
+        "fused_sources": [
+          "chroma"
+        ],
+        "entity_names": [],
+        "relation_path": [],
+        "retrieval_source": "chroma"
+      }
+    },
+    {
+      "evidence_id": "E12",
+      "id": "pdf_uieb_research_p0008_c003",
+      "source_system": "chroma",
+      "source_type": "pdf_chunk",
+      "title": "An Underwater Image Enhancement Benchmark Dataset and Beyond",
+      "content": "tter subjectively quality.\nimage have limitations in some cases.\n3) Runtime Evaluation: We compare the average runtime\nfor the images of different sizes. Experiments are conducted\nby using MATLAB R2014b on a PC with an Intel(R) i7-6700\nCPU, 32GB RAM. The average runtime is shown in Table IV.\nThe two-step-based [32] is the fastest across different image\nsizes, while the retinex-based [33] ranks the second fastest.\nThe regression-based [39] is the slowest method due to the\ntime-consuming random forest-based transmission prediction,\nespecially for images with large sizes.\nTABLE IV\nAVERAGE RUNTIME FOR DIFFERENT IMAGE SIZES (IN SECOND).\nMethod\n500 × 500\n640 × 480\n1280 × 720\nfusion-based [31]\n0.6044\n0.6798\n1.8431\ntwo-step-based [32]\n0.2978\n0.4391\n1.0361\nretinex-based [33]\n0.6975\n0.8829\n2.1089\nUDCP [37]\n2.2688\n3.3185\n9.9019\nregression-based [39]\n138.6138\n167.1711\n415.4935\nGDCP [40]\n3.2676\n3.8974\n9.5934\nRed Channel [42]\n2.7523\n3.2503\n9.7447\nhistogram prior [45]\n4.6284\n5.8289\n16.9229\nblurriness-based [46]\n37.0018\n47.2538\n146.0233\nAfter reviewing and evaluating the state-of-the-art underwater image enhancement methods, we found that the fusionbased [31] is the relatively best performer in most cases,\nwhile other compared methods have obvious disadvantages.\nHowever, there is no method which always wins when facing a large-scale real-world underwater image dataset (i.e.,\nUIEB). All in all, due to neglecting the underwater imaging\nphysical models, the non-physical model-based methods, such\nas two-step-based [32] and retinex-based [33], produce over-\n/under-enhanced results. Physical model-based methods, such\nas UDCP [37], employ an outdoor haze formation based\nmodel to predict the medium transmission which is not wellsuited for the underwater scenario.",
+      "score": 0.004861111111111111,
+      "page": 8,
+      "image_path": "",
+      "image_url": "",
+      "metadata": {
+        "related_species": "[]",
+        "chunk_type": "document_text",
+        "source_type": "pdf_chunk",
+        "source_org": "IEEE authors / arXiv",
+        "doc_id": "pdf_uieb_research",
+        "source_url": "https://arxiv.org/pdf/1901.05495",
+        "doc_type": "research_paper",
+        "page": 8,
+        "section": "IEEE TRANSACTIONS ON IMAGE PROCESSING",
+        "doc_title": "An Underwater Image Enhancement Benchmark Dataset and Beyond",
+        "species_id": "",
+        "modality": "pdf_text",
+        "fused_sources": [
+          "chroma"
+        ],
+        "entity_names": [],
+        "relation_path": [],
+        "retrieval_source": "chroma"
+      }
+    }
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "node": "session_init",
+      "event": "completed",
+      "detail": "verify_native_react"
+    },
+    {
+      "step": 2,
+      "node": "memory_load",
+      "event": "completed",
+      "detail": "0"
+    },
+    {
+      "step": 3,
+      "node": "followup_resolver",
+      "event": "completed",
+      "detail": "False:none:normal"
+    },
+    {
+      "step": 4,
+      "node": "router",
+      "event": "completed",
+      "detail": "pdf_qa"
+    },
+    {
+      "step": 5,
+      "node": "query_rewrite",
+      "event": "completed",
+      "detail": "query_rewrite"
+    },
+    {
+      "step": 6,
+      "node": "source_selection",
+      "event": "completed",
+      "detail": "pdf_retriever"
+    },
+    {
+      "step": 7,
+      "node": "react_tool_plan",
+      "event": "completed",
+      "detail": "step=1;mode=native_function_calling;tools=pdf_retriever"
+    },
+    {
+      "step": 8,
+      "node": "retrieval",
+      "event": "completed",
+      "detail": "text=0,web=0,image=0,pair=0,pdf=12,mcp_pdf_images=0,filter_species=none,elapsed=96.04s"
+    },
+    {
+      "step": 9,
+      "node": "rerank",
+      "event": "completed",
+      "detail": "weighted:12"
+    },
+    {
+      "step": 10,
+      "node": "context_builder",
+      "event": "completed",
+      "detail": "12"
+    },
+    {
+      "step": 11,
+      "node": "answer_generation",
+      "event": "completed",
+      "detail": "qwen:qwen3.7-plus:33.88s"
+    },
+    {
+      "step": 12,
+      "node": "response_guard",
+      "event": "completed",
+      "detail": "normal"
+    },
+    {
+      "step": 13,
+      "node": "evaluation",
+      "event": "completed",
+      "detail": "True:1.00"
+    },
+    {
+      "step": 14,
+      "node": "finalize",
+      "event": "completed",
+      "detail": "finalize"
+    },
+    {
+      "step": 15,
+      "node": "memory_save",
+      "event": "completed",
+      "detail": "1"
+    },
+    {
+      "step": 16,
+      "node": "api",
+      "event": "completed",
+      "detail": "latency_ms=137499"
+    }
+  ],
+  "warnings": [],
+  "memory": {
+    "last_species_ids": [
+      "coral"
+    ],
+    "last_species_names": [
+      "珊瑚"
+    ],
+    "last_image_path": "",
+    "last_image_caption": "",
+    "last_answer_summary": "您好！您的查询似乎出现了乱码（显示为多个问号）。根据提供的PDF证据，我为您综合总结了这些PDF文献中涵盖的主要内容、物种及数据集：\n\n**1. 西大西洋海洋生物资源（FAO指南）**\n*   **涵盖类群**：包含了脊椎动物（如**有鳍鱼类 finfish**）和无脊椎动物（invertebrate groups）的详细信息[E2, E3]。\n*   **内容细节**：提供了物种的FAO通用名称、科学名称、诊断特征、生物学与渔业信息、地理分布描述及分布图[E1, E2, E9]。\n\n**2. 珊瑚礁（Coral Reefs）**\n*   **涵盖物种**：**珊瑚（coral）** 及珊瑚礁生态系统[E7]。\n*   **内容细节**：介绍了珊瑚礁的类型、全球分布、生态重要性、面临的威胁以及相关的保护措施[E7]。\n\n**3. 水下图像增强基准数据集（UIEB）**\n*   **数据集内容**：这是一个真实世界的水下图像数据集，包含890张原始水下图像及其对应的高质量参考图像，以及60张具有挑战性的水下图像[E5, E8]。\n*   **应用场景**：主要用于定性和定量评估各种水下图",
+    "last_evidence_ids": [
+      "pdf_fao_wca_volume1_p0006_c004",
+      "pdf_fao_wca_volume1_p0006_c003",
+      "pdf_fao_wca_volume1_p0006_c002",
+      "pdf_fao_wca_volume1_p0003_c001",
+      "pdf_uieb_research_p0005_c002",
+      "pdf_uieb_research_p0004_c004",
+      "pdf_iucn_coral_reefs_p0005_c001",
+      "pdf_uieb_research_p0005_c003",
+      "pdf_fao_wca_volume1_p0006_c001",
+      "pdf_uieb_research_p0012_c002",
+      "pdf_duo_research_p0003_c002",
+      "pdf_uieb_research_p0008_c003"
+    ]
+  },
+  "route": {
+    "task_type": "pdf_qa",
+    "need_vlm": false,
+    "need_text_retrieval": false,
+    "need_image_retrieval": false,
+    "need_multimodal_retrieval": false,
+    "need_pdf_retrieval": true
+  },
+  "model": {
+    "provider": "qwen",
+    "name": "qwen3.7-plus",
+    "called": true,
+    "fallback": false
+  },
+  "pending_review": false,
+  "raw_state": null
+}

@@ -1,0 +1,22 @@
+{
+  "doc_sa_invertebrates_p0429_0432": {
+    "status": "handling",
+    "error_msg": "",
+    "chunks_count": 3,
+    "chunks_list": [
+      "chunk-bb3c9863b2a16dec12c5c6e8dc61896b",
+      "chunk-9982aa7ac8a091800d6c18cb727f7654",
+      "chunk-6d5173080be36f3adca220b10fe83047"
+    ],
+    "content_summary": "[DOC_ID=doc_sa_invertebrates_p0429_0432][SOURCE=Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf][PAGE=429]\ndistinguishing features\n\n[DOC_ID=doc_sa_invertebrates_p0429_0432][SOURCE=Field-Guide-to-SA-Offshore-Marine-Inve...",
+    "content_length": 10973,
+    "created_at": "2026-06-10T11:05:46.065101+00:00",
+    "updated_at": "2026-06-10T11:06:46+00:00",
+    "file_path": "Field-Guide-to-SA-Offshore-Marine-Invertebrates_web-full-version_compressed.pdf",
+    "track_id": "insert_20260610_190546_543b5502",
+    "metadata": {
+      "processing_start_time": 1781089546,
+      "processing_end_time": 1781089606
+    }
+  }
+}

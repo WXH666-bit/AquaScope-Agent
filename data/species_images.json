@@ -1,0 +1,22 @@
+{
+  "starfish": ["data/mrag/images/starfish/img_starfish_001.jpg"],
+  "echinus": ["data/mrag/images/sea_urchin/img_sea_urchin_001.jpg"],
+  "holothurian": ["data/mrag/images/sea_cucumber/img_sea_cucumber_001.jpg"],
+  "scallop": ["data/mrag/images/scallop/img_scallop_001.jpg"],
+  "jellyfish": ["data/mrag/images/jellyfish/img_jellyfish_001.jpg"],
+  "octopus": ["data/mrag/images/octopus/img_octopus_001.jpg"],
+  "clownfish": ["data/mrag/images/clownfish/img_clownfish_001.jpg"],
+  "coral": ["data/mrag/images/coral/img_coral_001.jpg"],
+  "manta_ray": ["data/mrag/images/manta_ray/img_manta_ray_001.jpg"],
+  "butterflyfish": [],
+  "grouper": [],
+  "lionfish": [],
+  "angelfish": [],
+  "parrotfish": [],
+  "cuttlefish": [],
+  "nudibranch": [],
+  "lobster": [],
+  "cleaner_shrimp": [],
+  "feather_star": [],
+  "sea_anemone": []
+}
