@@ -7,4 +7,5 @@ streamlit*.log
 .streamlit.pid
 importtime.log
 data/mrag/vector_db/
+data/mrag/sessions/
 data/vector_db/
