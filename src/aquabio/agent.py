@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 
 from .config import Settings
+from .detector import YOLODetector
 from .image_tools import analyze_quality, create_enhancements
 from .openrouter import OpenRouterClient
 from .retriever import HybridRetriever
@@ -34,6 +35,7 @@ class AquaBioAgent:
             )
         self._species_cards: list[dict] | None = None
         self._species_images: dict[str, list[str]] | None = None
+        self._detector: YOLODetector | None = None
 
     def _load_species_cards(self) -> list[dict]:
         if self._species_cards is not None:
@@ -56,6 +58,30 @@ class AquaBioAgent:
         else:
             self._species_images = {}
         return self._species_images
+
+    def _get_detector(self) -> YOLODetector | None:
+        """Lazy-load the YOLO detector.
+
+        Tries the DUO-trained model first, then falls back to COCO YOLOv8n.
+        Returns *None* when no model file is available.
+        """
+        if self._detector is not None:
+            return self._detector
+
+        model_dir = self.root / "models"
+        duo_path = model_dir / "duo_yolov8n.pt"
+        coco_path = model_dir / "yolov8n.pt"
+
+        duo_names = {0: "海参", 1: "海胆", 2: "扇贝", 3: "海星"}
+
+        if duo_path.exists():
+            self._detector = YOLODetector(str(duo_path), class_names=duo_names)
+        elif coco_path.exists():
+            self._detector = YOLODetector(str(coco_path))
+        else:
+            return None  # no model available — detection is skipped
+
+        return self._detector
 
     def _match_species_cards(self, state: dict) -> list[dict]:
         """Match VLM candidates and retrieval results to species cards.
@@ -147,7 +173,8 @@ class AquaBioAgent:
         body = "\n".join(excerpts) or "- 本地知识库尚无可用内容。"
         return f"{warning}\n\n与“{query}”最相关的本地证据：\n{body}"
 
-    def run(self, query: str, image_path: str | None = None) -> dict:
+    def run(self, query: str, image_path: str | None = None,
+            conversation_summary: dict | None = None) -> dict:
         state = {
             "query": query,
             "route": "multimodal_qa" if image_path else "document_qa",
@@ -158,6 +185,7 @@ class AquaBioAgent:
             "vision_analysis": None,
             "matched_species": [],
             "tool_trace": [],
+            "detections": None,
             "warnings": [],
             "answer": "",
         }
@@ -169,6 +197,26 @@ class AquaBioAgent:
                 image_path, self.root / "data/outputs/enhanced"
             )
             state["tool_trace"].append("image_enhancement")
+
+            # ── YOLO object detection ──
+            detector = self._get_detector()
+            if detector is not None:
+                state["detections"] = detector.detect(
+                    image_path,
+                    self.root / "data/outputs/detected",
+                )
+                state["tool_trace"].append("yolo_detection")
+                # Use YOLO labels to enrich the retrieval query
+                yolo_labels = [
+                    d["label"] for d in state["detections"]["detections"]
+                ]
+                if yolo_labels:
+                    retrieval_query += " " + " ".join(yolo_labels)
+            else:
+                state["warnings"].append(
+                    "未找到 YOLO 模型文件，已跳过目标检测。"
+                )
+
             if self.client.enabled:
                 state["vision_analysis"] = self.client.analyze_image(
                     image_path,
@@ -216,11 +264,39 @@ class AquaBioAgent:
                 "信息不足时明确说明不确定性。",
             ],
         }
+        # Build system prompt with optional conversation context
+        system_content = (
+            "你是 AquaBio-AgentRAG，请用简洁中文回答水下生物、图像增强和 PDF 问答问题。"
+        )
+        if conversation_summary:
+            ctx_parts = []
+            prev_species = conversation_summary.get("last_species_names", [])
+            prev_caption = conversation_summary.get("last_image_caption", "")
+            prev_query = conversation_summary.get("last_query", "")
+            if prev_species:
+                ctx_parts.append(
+                    f"上一轮识别的物种：{'、'.join(prev_species)}。"
+                )
+            if prev_caption:
+                ctx_parts.append(
+                    f"上一轮的图像内容：{prev_caption[:300]}。"
+                )
+            if prev_query:
+                ctx_parts.append(
+                    f"上一轮用户提问：{prev_query[:200]}。"
+                )
+            if ctx_parts:
+                ctx_parts.append(
+                    "核心规则：如果用户在当前问题中使用'它'、'这个'、'这种生物'、'该物种'等指代词，"
+                    "默认指的是上一轮识别的物种。请基于上一轮的物种信息来解释当前问题。"
+                )
+                system_content += "\n\n【对话上下文】\n" + "\n".join(ctx_parts)
+
         state["answer"] = self.client.chat(
             [
                 {
                     "role": "system",
-                    "content": "你是 AquaBio-AgentRAG，请用简洁中文回答水下生物、图像增强和 PDF 问答问题。",
+                    "content": system_content,
                 },
                 {"role": "user", "content": json.dumps(prompt, ensure_ascii=False)},
             ]

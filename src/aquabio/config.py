@@ -18,6 +18,63 @@ def load_env(path: str | Path = ".env") -> None:
         os.environ.setdefault(key.strip(), value.strip().strip("\"'"))
 
 
+def save_env_var(path: str | Path, key: str, value: str) -> None:
+    """Save or update a single KEY=VALUE line in a ``.env`` file.
+
+    Preserves all other lines (comments, blank lines, unrelated keys).
+    Creates the file if it does not exist.
+    Also updates ``os.environ`` in the current process so the change is
+    effective immediately.
+    """
+    env_path = Path(path)
+    lines: list[str] = []
+    if env_path.exists():
+        lines = env_path.read_text(encoding="utf-8").splitlines()
+
+    found = False
+    new_lines: list[str] = []
+    for line in lines:
+        stripped = line.strip()
+        if stripped and not stripped.startswith("#") and "=" in stripped:
+            existing_key = stripped.split("=", 1)[0].strip()
+            if existing_key == key:
+                new_lines.append(f"{key}={value}")
+                found = True
+                continue
+        new_lines.append(line)
+
+    if not found:
+        new_lines.append(f"{key}={value}")
+
+    env_path.write_text("\n".join(new_lines) + "\n", encoding="utf-8")
+    os.environ[key] = value
+
+
+def delete_env_var(path: str | Path, key: str) -> None:
+    """Remove a KEY=VALUE line from a ``.env`` file.
+
+    Preserves all other lines.  No-op if the file does not exist or the
+    key is not present.  Also removes the key from ``os.environ``.
+    """
+    env_path = Path(path)
+    if not env_path.exists():
+        os.environ.pop(key, None)
+        return
+
+    lines = env_path.read_text(encoding="utf-8").splitlines()
+    new_lines: list[str] = []
+    for line in lines:
+        stripped = line.strip()
+        if stripped and not stripped.startswith("#") and "=" in stripped:
+            existing_key = stripped.split("=", 1)[0].strip()
+            if existing_key == key:
+                continue  # drop this line
+        new_lines.append(line)
+
+    env_path.write_text("\n".join(new_lines) + "\n", encoding="utf-8")
+    os.environ.pop(key, None)
+
+
 @dataclass(frozen=True)
 class Settings:
     api_key: str = ""

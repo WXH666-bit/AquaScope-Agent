@@ -6,6 +6,9 @@ numpy>=1.26                  # numerical arrays
 opencv-python>=4.9           # cv2 - image quality analysis & enhancements
 Pillow>=10.0                 # PIL - image loading, resizing, format conversion
 
+# ===== Object Detection =====
+ultralytics>=8.4             # YOLOv8 - underwater organism detection (DUO dataset)
+
 # ===== Scientific Computing =====
 scipy>=1.11                  # sparse matrix I/O
 scikit-learn>=1.4            # TfidfVectorizer, BM25, ML utilities
